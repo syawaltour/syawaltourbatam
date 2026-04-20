@@ -3,6 +3,16 @@
 import React, { useState } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
+import avanzaImg from '@/assets/images/toyota-avanza.jpg';
+import innovaImg from '@/assets/images/toyota-innova.jpg';
+import teriosImg from '@/assets/images/daihatsu-terios.jpg';
+import hiaceImg from '@/assets/images/toyota-hiace.jpg';
+import hiacePremioImg from '@/assets/images/hiace-premio.jpg';
+import fortunerImg from '@/assets/images/toyota-fortuner.jpg';
+import alphardImg from '@/assets/images/toyota-alphard.jpg';
+import coasterImg from '@/assets/images/coaster.png';
+import busMediumImg from '@/assets/images/bus-medium.png';
+import bigBusImg from '@/assets/images/big-bus.png';
 
 type Lang = 'id' | 'en' | 'zh';
 
@@ -60,7 +70,7 @@ interface Vehicle {
   myr: string;
   sgd: string;
   badge?: string;
-  image: string;
+  image: string | any;
   imageAlt: string;
 }
 
@@ -72,7 +82,8 @@ const vehicles: Vehicle[] = [
   capacity: '7 Pax',
   myr: 'MYR 155',
   sgd: 'SGD 50',
-  image: "/assets/images/toyota-innova.png",
+  badge: 'Popular',
+  image: avanzaImg,
   imageAlt: 'Toyota Avanza white MPV side view on clean background'
 },
 {
@@ -83,7 +94,7 @@ const vehicles: Vehicle[] = [
   myr: 'MYR 250',
   sgd: 'SGD 75',
   badge: 'Popular',
-  image: "/assets/images/toyota-reborn.png",
+  image: innovaImg,
   imageAlt: 'Toyota Innova silver premium MPV exterior front three-quarter view'
 },
 {
@@ -93,7 +104,8 @@ const vehicles: Vehicle[] = [
   capacity: '7 Pax',
   myr: 'MYR 180',
   sgd: 'SGD 65',
-  image: "/assets/images/daihatsu-terios.png",
+  badge: 'Adventure',
+  image: teriosImg,
   imageAlt: 'Daihatsu Terios compact SUV on road adventure'
 },
 {
@@ -103,7 +115,8 @@ const vehicles: Vehicle[] = [
   capacity: '12 Pax',
   myr: 'MYR 330',
   sgd: 'SGD 105',
-  image: "/assets/images/toyota-hiace.png",
+  badge: 'Popular',
+  image: hiaceImg,
   imageAlt: 'Toyota Hiace white van minibus exterior side view'
 },
 {
@@ -114,7 +127,7 @@ const vehicles: Vehicle[] = [
   myr: 'MYR 700',
   sgd: 'SGD 220',
   badge: 'VVIP',
-  image: "/assets/images/toyota-hiace-premio.png",
+  image: hiacePremioImg,
   imageAlt: 'Luxury Hiace Premio VVIP interior with premium leather seats and ambient lighting'
 },
 {
@@ -125,7 +138,7 @@ const vehicles: Vehicle[] = [
   myr: 'MYR 410',
   sgd: 'SGD 140',
   badge: 'VIP',
-  image: "/assets/images/toyota-fortuner.png",
+  image: fortunerImg,
   imageAlt: 'Toyota Fortuner black luxury SUV dramatic front view night'
 },
 {
@@ -136,7 +149,7 @@ const vehicles: Vehicle[] = [
   myr: 'MYR 1.000',
   sgd: 'SGD 310',
   badge: 'VVIP',
-  image: "/assets/images/toyota-alphard.png",
+  image: alphardImg,
   imageAlt: 'Toyota Alphard black VVIP luxury MPV exterior sleek dark night'
 },
 {
@@ -146,7 +159,8 @@ const vehicles: Vehicle[] = [
   capacity: '25 Pax',
   myr: 'MYR 350',
   sgd: 'SGD 115',
-  image: "/assets/images/toyota-coaster.png",
+  badge: 'Group',
+  image: coasterImg,
   imageAlt: 'Toyota Coaster white mini bus tourism exterior'
 },
 {
@@ -156,7 +170,8 @@ const vehicles: Vehicle[] = [
   capacity: '35 Pax',
   myr: 'MYR 425',
   sgd: 'SGD 140',
-  image: "/assets/images/toyota-bus-medium.png",
+  badge: 'Group',
+  image: busMediumImg,
   imageAlt: 'Modern medium tour bus white exterior on highway road'
 },
 {
@@ -166,7 +181,8 @@ const vehicles: Vehicle[] = [
   capacity: '50 Pax',
   myr: 'MYR 590',
   sgd: 'SGD 190',
-  image: "/assets/images/toyota-big-bus.png",
+  badge: 'Group',
+  image: bigBusImg,
   imageAlt: 'Large luxury tourism bus exterior on scenic road trip'
 }];
 
@@ -181,12 +197,14 @@ const vehicles: Vehicle[] = [
 const badgeColors: Record<string, string> = {
   Popular: 'bg-blue-500/20 text-blue-300 border-blue-400/30',
   VVIP: 'bg-accent/20 text-accent border-accent/30',
-  VIP: 'bg-purple-500/20 text-purple-300 border-purple-400/30'
+  VIP: 'bg-purple-500/20 text-purple-300 border-purple-400/30',
+  Adventure: 'bg-green-500/20 text-green-300 border-green-400/30',
+  Group: 'bg-orange-500/20 text-orange-300 border-orange-400/30'
 };
 
 export default function FleetSection({ lang }: FleetSectionProps) {
   const labels = sectionLabels[lang];
-  const [currency, setCurrency] = useState< 'myr' | 'sgd'>('sgd');
+  const [currency, setCurrency] = useState<'sgd' | 'myr'>('sgd');
 
   const getPrice = (v: Vehicle) => {
     if (currency === 'myr') return v.myr;
@@ -226,7 +244,7 @@ export default function FleetSection({ lang }: FleetSectionProps) {
         {/* Currency Toggle */}
         <div className="flex justify-center mb-10 reveal">
           <div className="glass rounded-2xl p-1.5 flex gap-1">
-            {(['myr', 'sgd'] as const).map((cur) =>
+            {(['sgd','myr'] as const).map((cur) =>
             <button
               key={cur}
               onClick={() => setCurrency(cur)}
@@ -235,7 +253,7 @@ export default function FleetSection({ lang }: FleetSectionProps) {
               'btn-gold shadow-[0_4px_16px_rgba(245,166,35,0.3)]' :
               'text-muted-foreground hover:text-foreground'}`
               }>
-              
+
                 {cur.toUpperCase()}
               </button>
             )}
@@ -268,7 +286,8 @@ export default function FleetSection({ lang }: FleetSectionProps) {
                 alt={v.imageAlt}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw" />
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                unoptimized={true} />
               
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F2248]/80 via-transparent to-transparent" />
                 {v.badge &&
