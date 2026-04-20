@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: 'Syawal Tour and Travel — Rental Mobil & Tour Batam',
-  description: 'Rental mobil & tour terpercaya di Batam. Armada premium, harga terjangkau, terima IDR, MYR, SGD. Pesan via WhatsApp, layanan 24 jam.',
+  description: 'Rental mobil & tour terpercaya di Batam. Armada premium, harga terjangkau, terima MYR, SGD. Pesan via WhatsApp, layanan 24 jam.',
   icons: {
     icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
   },

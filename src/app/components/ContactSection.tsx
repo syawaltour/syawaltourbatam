@@ -141,7 +141,7 @@ export default function ContactSection({ lang }: ContactSectionProps) {
                 <div>
                   <div className="text-xs font-bold uppercase tracking-widest text-accent mb-1">{c.currencyLabel}</div>
                   <div className="flex gap-2 mt-1">
-                    {['IDR', 'MYR', 'SGD'].map((cur) => (
+                    {['MYR', 'SGD'].map((cur) => (
                       <span key={cur} className="px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-bold border border-accent/20">
                         {cur}
                       </span>

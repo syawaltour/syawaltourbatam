@@ -57,7 +57,6 @@ interface Vehicle {
   name: string;
   type: string;
   capacity: string;
-  idr: string;
   myr: string;
   sgd: string;
   badge?: string;
@@ -71,10 +70,9 @@ const vehicles: Vehicle[] = [
   name: 'New Avanza',
   type: 'MPV',
   capacity: '7 Pax',
-  idr: 'Rp800.000',
   myr: 'MYR 155',
   sgd: 'SGD 50',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1397177f7-1769667422132.png",
+  image: "/assets/images/toyota-innova.png",
   imageAlt: 'Toyota Avanza white MPV side view on clean background'
 },
 {
@@ -82,11 +80,10 @@ const vehicles: Vehicle[] = [
   name: 'Innova Reborn',
   type: 'MPV Premium',
   capacity: '7 Pax',
-  idr: 'Rp1.200.000',
   myr: 'MYR 250',
   sgd: 'SGD 75',
   badge: 'Popular',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_144c4e8d9-1766473631173.png",
+  image: "/assets/images/toyota-reborn.png",
   imageAlt: 'Toyota Innova silver premium MPV exterior front three-quarter view'
 },
 {
@@ -94,10 +91,9 @@ const vehicles: Vehicle[] = [
   name: 'Terios',
   type: 'SUV',
   capacity: '7 Pax',
-  idr: 'Rp1.000.000',
   myr: 'MYR 180',
   sgd: 'SGD 65',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1f4b2e459-1769045822657.png",
+  image: "/assets/images/daihatsu-terios.png",
   imageAlt: 'Daihatsu Terios compact SUV on road adventure'
 },
 {
@@ -105,10 +101,9 @@ const vehicles: Vehicle[] = [
   name: 'Van Hiace',
   type: 'Minibus',
   capacity: '12 Pax',
-  idr: 'Rp1.700.000',
   myr: 'MYR 330',
   sgd: 'SGD 105',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_193debc66-1766214012940.png",
+  image: "/assets/images/toyota-hiace.png",
   imageAlt: 'Toyota Hiace white van minibus exterior side view'
 },
 {
@@ -116,11 +111,10 @@ const vehicles: Vehicle[] = [
   name: 'Hiace Premio VVIP',
   type: 'Minibus VIP',
   capacity: '10 Pax',
-  idr: 'Rp3.500.000',
   myr: 'MYR 700',
   sgd: 'SGD 220',
   badge: 'VVIP',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_19e7405c3-1767675240671.png",
+  image: "/assets/images/toyota-hiace-premio.png",
   imageAlt: 'Luxury Hiace Premio VVIP interior with premium leather seats and ambient lighting'
 },
 {
@@ -128,11 +122,10 @@ const vehicles: Vehicle[] = [
   name: 'Fortuner VIP',
   type: 'SUV Premium',
   capacity: '7 Pax',
-  idr: 'Rp2.200.000',
   myr: 'MYR 410',
   sgd: 'SGD 140',
   badge: 'VIP',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_126ce7f4b-1764829377500.png",
+  image: "/assets/images/toyota-fortuner.png",
   imageAlt: 'Toyota Fortuner black luxury SUV dramatic front view night'
 },
 {
@@ -140,11 +133,10 @@ const vehicles: Vehicle[] = [
   name: 'Alphard VVIP',
   type: 'MPV Luxury',
   capacity: '7 Pax',
-  idr: 'Rp5.000.000',
   myr: 'MYR 1.000',
   sgd: 'SGD 310',
   badge: 'VVIP',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_141be13e1-1776690759154.png",
+  image: "/assets/images/toyota-alphard.png",
   imageAlt: 'Toyota Alphard black VVIP luxury MPV exterior sleek dark night'
 },
 {
@@ -152,10 +144,9 @@ const vehicles: Vehicle[] = [
   name: 'Coaster',
   type: 'Mini Bus',
   capacity: '25 Pax',
-  idr: 'Rp1.800.000',
   myr: 'MYR 350',
   sgd: 'SGD 115',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_195cc6500-1771213609945.png",
+  image: "/assets/images/toyota-coaster.png",
   imageAlt: 'Toyota Coaster white mini bus tourism exterior'
 },
 {
@@ -163,10 +154,9 @@ const vehicles: Vehicle[] = [
   name: 'Bus Medium',
   type: 'Bus',
   capacity: '35 Pax',
-  idr: 'Rp2.200.000',
   myr: 'MYR 425',
   sgd: 'SGD 140',
-  image: "https://images.unsplash.com/photo-1557062208-0f319101c714",
+  image: "/assets/images/toyota-bus-medium.png",
   imageAlt: 'Modern medium tour bus white exterior on highway road'
 },
 {
@@ -174,10 +164,9 @@ const vehicles: Vehicle[] = [
   name: 'Big Bus',
   type: 'Bus Besar',
   capacity: '50 Pax',
-  idr: 'Rp3.000.000',
   myr: 'MYR 590',
   sgd: 'SGD 190',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_19b7340a2-1776669052074.png",
+  image: "/assets/images/toyota-big-bus.png",
   imageAlt: 'Large luxury tourism bus exterior on scenic road trip'
 }];
 
@@ -197,12 +186,11 @@ const badgeColors: Record<string, string> = {
 
 export default function FleetSection({ lang }: FleetSectionProps) {
   const labels = sectionLabels[lang];
-  const [currency, setCurrency] = useState<'idr' | 'myr' | 'sgd'>('idr');
+  const [currency, setCurrency] = useState< 'myr' | 'sgd'>('sgd');
 
   const getPrice = (v: Vehicle) => {
     if (currency === 'myr') return v.myr;
-    if (currency === 'sgd') return v.sgd;
-    return v.idr;
+    return v.sgd;
   };
 
   const buildWAMessage = (vehicleName: string) => {
@@ -238,7 +226,7 @@ export default function FleetSection({ lang }: FleetSectionProps) {
         {/* Currency Toggle */}
         <div className="flex justify-center mb-10 reveal">
           <div className="glass rounded-2xl p-1.5 flex gap-1">
-            {(['idr', 'myr', 'sgd'] as const).map((cur) =>
+            {(['myr', 'sgd'] as const).map((cur) =>
             <button
               key={cur}
               onClick={() => setCurrency(cur)}

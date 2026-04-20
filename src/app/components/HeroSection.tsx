@@ -32,7 +32,7 @@ const heroContent: Record<Lang, {
     badge: 'Tersedia 24 Jam',
     stat1Val: '10+', stat1Label: 'Armada Tersedia',
     stat2Val: '24/7', stat2Label: 'Layanan Aktif',
-    stat3Val: 'IDR·MYR·SGD', stat3Label: 'Mata Uang Diterima'
+    stat3Val: 'MYR·SGD', stat3Label: 'Mata Uang Diterima'
   },
   en: {
     eyebrow: 'Batam • Riau Islands',
@@ -44,7 +44,7 @@ const heroContent: Record<Lang, {
     badge: 'Available 24 Hours',
     stat1Val: '10+', stat1Label: 'Vehicles Available',
     stat2Val: '24/7', stat2Label: 'Active Service',
-    stat3Val: 'IDR·MYR·SGD', stat3Label: 'Currencies Accepted'
+    stat3Val: 'MYR·SGD', stat3Label: 'Currencies Accepted'
   },
   zh: {
     eyebrow: '巴淡岛 • 廖内群岛',
@@ -56,7 +56,7 @@ const heroContent: Record<Lang, {
     badge: '24小时服务',
     stat1Val: '10+', stat1Label: '可用车辆',
     stat2Val: '24/7', stat2Label: '全天服务',
-    stat3Val: 'IDR·MYR·SGD', stat3Label: '接受货币'
+    stat3Val: 'MYR·SGD', stat3Label: '接受货币'
   }
 };
 
