@@ -22,6 +22,24 @@
   --font-sans: var(--font-plus-jakarta-sans), sans-serif;
 }
 
+html.light {
+  --background: #F0F4FF;
+  --foreground: #0A2F6C;
+  --primary: #0A2F6C;
+  --primary-foreground: #FFFFFF;
+  --secondary: #D6E4FF;
+  --secondary-foreground: #0A2F6C;
+  --accent: #E8940F;
+  --accent-foreground: #FFFFFF;
+  --muted: #E2EAFF;
+  --muted-foreground: #3A5A9C;
+  --card: #FFFFFF;
+  --card-foreground: #0A2F6C;
+  --border: #C5D5F0;
+  --input: #E2EAFF;
+  --ring: #E8940F;
+}
+
 @layer base {
   * {
     box-sizing: border-box;
@@ -58,6 +76,16 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  html.light .glass {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(10, 47, 108, 0.15);
+  }
+
+  html.light .glass-light {
+    background: rgba(10, 47, 108, 0.06);
+    border: 1px solid rgba(10, 47, 108, 0.12);
   }
 
   .text-gradient-gold {
