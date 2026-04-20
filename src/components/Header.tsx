@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import AppLogo from '@/components/ui/AppLogo';
 import Icon from '@/components/ui/AppIcon';
+import { useTheme } from '@/context/ThemeContext';
 
 type Lang = 'id' | 'en' | 'zh';
 
@@ -21,6 +22,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
   const labels = navLabels[lang];
 
   useEffect(() => {
@@ -97,6 +99,24 @@ export default function Header({ lang, setLang }: HeaderProps) {
 
           {/* Right Controls */}
           <div className="flex items-center gap-3">
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg glass-light text-foreground hover:text-accent transition-all duration-200"
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {theme === 'dark' ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="4"/>
+                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+              )}
+            </button>
+
             {/* Language Switcher */}
             <div className="relative">
               <button
@@ -116,7 +136,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
                       onClick={() => { setLang(opt.code); setLangOpen(false); }}
                       className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors duration-150 ${
                         lang === opt.code
-                          ? 'text-accent bg-accent/10' :'text-foreground hover:bg-white/5'
+                          ? 'text-accent bg-accent/10' : 'text-foreground hover:bg-white/5'
                       }`}
                     >
                       <span>{opt.flag}</span>
@@ -159,7 +179,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
         className={`fixed inset-0 z-40 lg:hidden transition-all duration-300 ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
-        style={{ background: 'rgba(10, 47, 108, 0.97)', backdropFilter: 'blur(20px)' }}
+        style={{ background: theme === 'dark' ? 'rgba(10, 47, 108, 0.97)' : 'rgba(240, 244, 255, 0.97)', backdropFilter: 'blur(20px)' }}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8 pt-20">
           {navLinks.map((link, i) => (
