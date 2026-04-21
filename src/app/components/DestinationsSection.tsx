@@ -188,16 +188,31 @@ const destinations: Destination[] = [
   tag: 'Landmark',
   tagType: 'free',
   waKeyword: 'wisata ke Welcome to Batam'
+},
+{
+  nameId: 'Padang Golf Sukajadi',
+  nameEn: 'Sukajadi Golf Course',
+  nameZh: '苏卡贾迪高尔夫球场',
+  nameMs: 'Padang Golf Sukajadi',
+  descId: 'Lapangan golf 18-hole dengan pemandangan laut yang indah. Fasilitas lengkap dengan clubhouse, restoran, dan pro shop. Cocok untuk pemula hingga profesional.',
+  descEn: '18-hole golf course with beautiful sea views. Complete facilities including clubhouse, restaurant, and pro shop. Suitable for beginners to professionals.',
+  descZh: '18洞高尔夫球场，拥有海景美景。设施齐全，包括会所、餐厅和专业用品店，适合从初学者到专业人士。',
+  descMs: 'Lapangan golf 18-lubang dengan pemandangan laut yang indah. Kemudahan lengkap termasuk clubhouse, restoran dan pro shop. Sesuai untuk pemula hingga profesional.',
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDc5j4rlV7d4PtMOkE2TNSP5IxNtqeVB0q4w&s",
+  imageAlt: 'Green golf course with manicured grass overlooking blue sea and skyline',
+  tag: 'Golf',
+  tagType: 'paid',
+  waKeyword: 'wisata ke Padang Golf Sukajadi'
 }];
 
 
 // BENTO GRID AUDIT:
-// Array has 8 cards: [Vihara, Barelang, TreasureBay, PuncakBeliung, Kelenteng, TamanRusa, MasjidSultan, WelcomeToBatam]
+// Array has 9 cards: [Vihara, Barelang, TreasureBay, PuncakBeliung, Kelenteng, TamanRusa, MasjidSultan, WelcomeToBatam, Golf]
 // Desktop grid-cols-3:
 // Row 1: [col-1: Vihara] [col-2: Barelang] [col-3: TreasureBay]
 // Row 2: [col-1: PuncakBeliung] [col-2: Kelenteng] [col-3: TamanRusa]
-// Row 3: [col-1: MasjidSultan] [col-2: WelcomeToBatam] [col-3: ]
-// Placed 8/8 cards ✓
+// Row 3: [col-1: MasjidSultan] [col-2: WelcomeToBatam] [col-3: Golf]
+// Placed 9/9 cards ✓
 
 export default function DestinationsSection({ lang }: DestinationsSectionProps) {
   const labels = sectionLabels[lang];
@@ -234,11 +249,11 @@ export default function DestinationsSection({ lang }: DestinationsSectionProps) 
         </div>
 
         {/* Destinations Grid */}
-        {/* BENTO GRID: 8 cards, grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 */}
+        {/* BENTO GRID: 9 cards, grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Row 1: col-1: Vihara | col-2: Barelang | col-3: TreasureBay */}
           {/* Row 2: col-1: PuncakBeliung | col-2: Kelenteng | col-3: TamanRusa */}
-          {/* Row 3: col-1: MasjidSultan | col-2: WelcomeToBatam | col-3: empty */}
+          {/* Row 3: col-1: MasjidSultan | col-2: WelcomeToBatam | col-3: Golf */}
           {destinations.map((dest, i) =>
           <div
             key={i}

@@ -43,7 +43,7 @@ export default function DestinationSchema({ destinations }: DestinationSchemaPro
     },
     geo: batamRegion,
     isAccessibleForFree: dest.tagType === 'free',
-    touristType: ['Cultural', 'Nature', 'Family'],
+    touristType: ['Cultural', 'Nature', 'Family', 'Golf'],
     offers: dest.tagType === 'paid' ? {
       '@type': 'Offer',
       priceCurrency: 'IDR',

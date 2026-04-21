@@ -129,7 +129,7 @@ export default function Footer({ lang }: FooterProps) {
         {/* Bottom Bar */}
         <div className="border-t border-border/30 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-muted-foreground">
-            © {year} Syawal Tour and Travel. All rights reserved.
+            © {year} Antpen. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-xs text-muted-foreground hover:text-accent transition-colors">{c.privacy}</a>
