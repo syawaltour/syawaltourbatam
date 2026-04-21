@@ -138,17 +138,17 @@ const destinations: Destination[] = [
   waKeyword: 'wisata ke Taman Rusa Sekupang'
 },
 {
-  nameId: 'Masjid Sultan Syarif Kasim',
-  nameEn: 'Sultan Syarif Kasim Mosque',
-  nameZh: '苏丹·叙利亚·卡欣清真寺',
+  nameId: 'Masjid Sultan Mahmud Riayat Syah',
+  nameEn: 'Sultan Mahmud Riayat Syah Mosque',
+  nameZh: '苏丹·马哈茂德·利亚特·沙阿清真寺',
   descId: 'Masjid bersejarah dengan arsitektur Islam yang megah di pusat kota Batam. Landmark religius yang menakjubkan dan wisata sejarah.',
   descEn: 'Historic mosque with magnificent Islamic architecture in the heart of Batam city. A stunning religious landmark and historical tourism site.',
   descZh: '位于巴淡市中心的宏伟历史清真寺，拥有壮观的伊斯兰建筑，是令人惊叹的宗教地标和历史旅游景点。',
-  image: "https://assets-a1.kompasiana.com/items/album/2020/08/14/fb-img-1597024840124-5f363c0a097f367425468132.jpg",
+  image: "https://masjidsultan.org/wp-content/uploads/2020/02/Mesjid-Sultan-768x512-1.jpg",
   imageAlt: 'Grand mosque with Islamic architecture domes and minarets under blue sky',
   tag: 'Masjid',
   tagType: 'free',
-  waKeyword: 'wisata ke Masjid Sultan Syarif Kasim'
+  waKeyword: 'wisata ke Masjid Sultan Mahmud Riayat Syah'
 },
 {
   nameId: 'Welcome to Batam',

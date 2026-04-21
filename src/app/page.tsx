@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SeoJsonLd from '@/components/SeoJsonLd';
 import HeroSection from './components/HeroSection';
 import FleetSection from './components/FleetSection';
 import ServicesSection from './components/ServicesSection';
@@ -46,6 +47,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <SeoJsonLd />
       <Header lang={lang} setLang={setLang} />
 
       <main>

@@ -18,18 +18,134 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
-  title: 'Syawal Tour and Travel — Rental Mobil & Tour Batam',
-  description: 'Rental mobil & tour terpercaya di Batam. Armada premium, harga terjangkau, terima SGD, MYR. Pesan via WhatsApp, layanan 24 jam.',
+  title: {
+    default: 'Syawal Tour and Travel — Rental Mobil & Tour Batam',
+    template: '%s | Syawal Tour'
+  },
+  description: 'Rental mobil & tour terpercaya di Batam. Armada premium, harga terjangkau, terima SGD, MYR. Pesan via WhatsApp, layanan 24 jam. Melayani tour Maha Vihara Duta Maitreya, Jembatan Barelang, Treasure Bay, dan destinasi populer lainnya.',
+  keywords: ['rental mobil batam', 'sewa mobil batam', 'tour batam', 'travel batam', 'wisata batam', 'maha vihara duta maitreya', 'jembatan barelang', 'treasure bay batam', 'rent car batam', 'batam car rental', 'syawal tour'],
+  authors: [{ name: 'Syawal Tour and Travel' }],
+  creator: 'Syawal Tour and Travel',
+  publisher: 'Syawal Tour and Travel',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'id-ID': '/id',
+      'en-US': '/en',
+      'zh-CN': '/zh',
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'id_ID',
+    alternateLocale: ['en_US', 'zh_CN'],
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+    title: 'Syawal Tour and Travel — Rental Mobil & Tour Batam',
+    description: 'Rental mobil & tour terpercaya di Batam. Armada premium, harga terjangkau, terima SGD, MYR. Pesan via WhatsApp, layanan 24 jam.',
+    siteName: 'Syawal Tour and Travel',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Syawal Tour and Travel Batam',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Syawal Tour and Travel — Rental Mobil & Tour Batam',
+    description: 'Rental mobil & tour terpercaya di Batam. Armada premium, harga terjangkau, terima SGD, MYR. Pesan via WhatsApp, layanan 24 jam.',
+    images: ['/twitter-image.jpg'],
+    creator: '@syawaltour',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
   icons: {
     icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
+    shortcut: ['/favicon-16x16.png'],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TravelAgency',
+    name: 'Syawal Tour and Travel',
+    description: 'Rental mobil & tour terpercaya di Batam. Armada premium, harga terjangkau, terima SGD, MYR.',
+    url: baseUrl,
+    telephone: '+6281269065423',
+    email: 'info@syawaltour.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Batam',
+      addressRegion: 'Kepulauan Riau',
+      addressCountry: 'ID',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '1.1305',
+      longitude: '104.0557',
+    },
+    areaServed: {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: '1.1305',
+        longitude: '104.0557',
+      },
+      geoRadius: '50000',
+    },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '00:00',
+      closes: '23:59',
+    },
+    priceRange: '$$',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      reviewCount: '150',
+    },
+    sameAs: [
+      'https://wa.me/6281269065423',
+      'https://www.instagram.com/syawaltour',
+    ],
+  };
+
   return (
     <html lang="id" className={plusJakartaSans.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={plusJakartaSans.className}>
         <ThemeProvider>
           {children}
