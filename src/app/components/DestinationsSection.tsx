@@ -66,7 +66,7 @@ const destinations: Destination[] = [
   descId: 'Vihara Buddha terbesar di Asia Tenggara. Dibangun tahun 1991, memiliki 5 aula doa dan restoran vegetarian. Populer di kalangan wisatawan China, Singapura & Korea.',
   descEn: 'The largest Buddhist temple in Southeast Asia. Built in 1991, featuring 5 prayer halls and a vegetarian restaurant. Popular with Chinese, Singaporean & Korean tourists.',
   descZh: '东南亚最大的佛教寺庙，建于1991年，设有5个祈祷大厅和素食餐厅，深受中国、新加坡和韩国游客喜爱。',
-  image: "https://images.unsplash.com/photo-1669256336414-bd2d70b40f85",
+  image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhth1aMUPdUk4w89NiFPkiQH97l1kTowjonRKTGCFmlu7_pHbJddgPWU7s66TT977wUjyPPWpQzjSSP7wSf7dsdJhDfXZIMFDpO-DFazgh8yTrx2nbKkoRl8aji1fSzJ_sY-xTu/s1600/01+Maha+Vihara+Duta+Maitreya+Monastery+%2528%25E5%25A4%25A9%25E6%2581%25A9%25E5%25BC%25A5%25E5%258B%2592%25E4%25BD%259B%25E9%2599%25A2%2529+%2540+Batam+Island+%255BIndonesia%255D+%2528Large%2529.JPG",
   imageAlt: 'Grand Buddhist temple with ornate golden roof architecture surrounded by tropical greenery dim atmospheric',
   tag: 'Vihara',
   tagType: 'free',
@@ -79,7 +79,7 @@ const destinations: Destination[] = [
   descId: 'Ikon Batam — 6 jembatan megah yang menghubungkan Pulau Batam, Rempang, dan Galang. Pemandangan laut yang menakjubkan sepanjang perjalanan.',
   descEn: 'Batam\'s icon — 6 magnificent bridges connecting Batam, Rempang, and Galang islands. Stunning sea views throughout the journey.',
   descZh: '巴淡岛的标志性建筑——6座宏伟大桥连接巴淡岛、伦邦岛和加朗岛，沿途海景令人叹为观止。',
-  image: "https://images.unsplash.com/photo-1533691270771-6e9b0aeee7f9",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2NMR2cg30r-ILgKw7lWpXdgmbOxklrzPr3nYWZEPH1xpNWdLXsSqXwabAhq56LxZguFC986I_WZbzi3dUS8BKRRYZcsSEEy_z-7kCf8wP&s=10",
   imageAlt: 'Long suspension bridge over turquoise tropical sea water golden hour atmospheric dark shadows',
   tag: 'Landmark',
   tagType: 'free',
@@ -91,25 +91,25 @@ const destinations: Destination[] = [
   nameZh: '宝湾巴淡岛',
   descId: 'Taman air dan resort premium dengan wahana seru, kolam renang raksasa, dan patung ikonik. Destinasi keluarga terfavorit di Batam.',
   descEn: 'Premium water park and resort with exciting rides, giant pool, and iconic statues. Batam\'s most popular family destination.',
-  descZh: '高端水上乐园和度假村，设有刺激的游乐设施、巨型泳池和标志性雕塑，是巴淡岛最受欢迎的家庭目的地。',
-  image: "https://images.unsplash.com/photo-1727994963040-b8d9df5f6a0e",
+  descZh: '高端水上乐园和度假村，设有刺激的游乐设施、巨型泳池和标志性雕塑，是巴淡岛最受欢迎的家庭 destinations.',
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1nP0zMNCbik9o3JGPpVlkYicerwkitG-1Sg&s=10",
   imageAlt: 'Tropical water park with slides and pools surrounded by palm trees bright sunny day',
   tag: 'Water Park',
   tagType: 'paid',
   waKeyword: 'wisata ke Treasure Bay Batam'
 },
 {
-  nameId: 'Pantai Nongsa',
-  nameEn: 'Nongsa Beach',
-  nameZh: '弄沙海滩',
-  descId: 'Pantai indah di ujung timur Batam dengan pemandangan Singapura yang memukau. Cocok untuk sunset, snorkeling, dan bersantai.',
-  descEn: 'Beautiful beach at the eastern tip of Batam with stunning views of Singapore. Perfect for sunsets, snorkeling, and relaxation.',
-  descZh: '巴淡岛东端的美丽海滩，可欣赏新加坡壮观美景，非常适合观看日落、浮潜和休闲放松。',
-  image: "https://images.unsplash.com/photo-1728042743614-ba1922d94000",
-  imageAlt: 'Pristine tropical beach with clear turquoise water palm trees and white sand dim atmospheric sunset',
-  tag: 'Pantai',
+  nameId: 'Puncak Beliung',
+  nameEn: 'Puncak Beliung',
+  nameZh: '巴淡普纳卡贝隆',
+  descId: 'Tempat wisata alam dengan pemandangan kota Batam dan selat Singapura yang indah. Cocok untuk camping, foto-foto, dan menikmati udara pegunungan.',
+  descEn: 'Nature tourism spot with beautiful views of Batam city and the Singapore strait. Perfect for camping, photography, and enjoying mountain air.',
+  descZh: '自然旅游景点，可欣赏巴淡市和新加坡海峡的美丽景色，非常适合露营、摄影和享受山间空气。',
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL_xgdc7X0XZ-4SECauwx17I1mjwxaehQpmA&s",
+  imageAlt: 'Scenic mountain viewpoint overlooking city skyline and ocean with atmospheric sunset',
+  tag: 'Wisata Alam',
   tagType: 'free',
-  waKeyword: 'wisata ke Pantai Nongsa'
+  waKeyword: 'wisata ke Puncak Beliung Batam'
 },
 {
   nameId: 'Kelenteng Tua Pek Kong',
@@ -131,20 +131,47 @@ const destinations: Destination[] = [
   descId: 'Taman mini dengan berbagai satwa liar di lahan 12,2 hektar. Tiket masuk sangat terjangkau — cocok untuk wisata keluarga bersama anak.',
   descEn: 'Mini zoo with various wildlife on 12.2 hectares of land. Very affordable entrance fee — perfect for family trips with children.',
   descZh: '占地12.2公顷的小型动物园，栖息着各种野生动物，门票非常实惠，非常适合携带孩子的家庭游览。',
-  image: "https://images.unsplash.com/photo-1720157178460-d32dc0801684",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcuVSbKm_vD7fe9gwD8rdzK4UQ9hVxhlGm7A&s=10",
   imageAlt: 'Lush tropical nature park with deer grazing green grass trees atmospheric natural light',
   tag: 'Taman',
   tagType: 'paid',
   waKeyword: 'wisata ke Taman Rusa Sekupang'
+},
+{
+  nameId: 'Masjid Sultan Syarif Kasim',
+  nameEn: 'Sultan Syarif Kasim Mosque',
+  nameZh: '苏丹·叙利亚·卡欣清真寺',
+  descId: 'Masjid bersejarah dengan arsitektur Islam yang megah di pusat kota Batam. Landmark religius yang menakjubkan dan wisata sejarah.',
+  descEn: 'Historic mosque with magnificent Islamic architecture in the heart of Batam city. A stunning religious landmark and historical tourism site.',
+  descZh: '位于巴淡市中心的宏伟历史清真寺，拥有壮观的伊斯兰建筑，是令人惊叹的宗教地标和历史旅游景点。',
+  image: "https://assets-a1.kompasiana.com/items/album/2020/08/14/fb-img-1597024840124-5f363c0a097f367425468132.jpg",
+  imageAlt: 'Grand mosque with Islamic architecture domes and minarets under blue sky',
+  tag: 'Masjid',
+  tagType: 'free',
+  waKeyword: 'wisata ke Masjid Sultan Syarif Kasim'
+},
+{
+  nameId: 'Welcome to Batam',
+  nameEn: 'Welcome to Batam',
+  nameZh: '欢迎来到巴淡岛',
+  descId: 'Ikonik landmark patung welcome di gerbang masuk Batam. Spot foto favorit wisatawan sebagai bukti kunjungan ke pulau Batam.',
+  descEn: 'Iconic welcome statue landmark at Batam entrance gate. A favorite photo spot for tourists as proof of their visit to Batam island.',
+  descZh: '巴淡岛入口处的标志性欢迎雕塑，是游客最喜爱的拍照打卡点，作为访问巴淡岛的纪念。',
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1j-udFLGd2Mck-GaoSbr4xZxg2MMVWjcDpw&s",
+  imageAlt: 'Iconic welcome monument landmark with city background',
+  tag: 'Landmark',
+  tagType: 'free',
+  waKeyword: 'wisata ke Welcome to Batam'
 }];
 
 
 // BENTO GRID AUDIT:
-// Array has 6 cards: [Vihara, Barelang, TreasureBay, Nongsa, Kelenteng, TamanRusa]
+// Array has 8 cards: [Vihara, Barelang, TreasureBay, PuncakBeliung, Kelenteng, TamanRusa, MasjidSultan, WelcomeToBatam]
 // Desktop grid-cols-3:
 // Row 1: [col-1: Vihara] [col-2: Barelang] [col-3: TreasureBay]
-// Row 2: [col-1: Nongsa] [col-2: Kelenteng] [col-3: TamanRusa]
-// Placed 6/6 cards ✓
+// Row 2: [col-1: PuncakBeliung] [col-2: Kelenteng] [col-3: TamanRusa]
+// Row 3: [col-1: MasjidSultan] [col-2: WelcomeToBatam] [col-3: ]
+// Placed 8/8 cards ✓
 
 export default function DestinationsSection({ lang }: DestinationsSectionProps) {
   const labels = sectionLabels[lang];
@@ -180,10 +207,11 @@ export default function DestinationsSection({ lang }: DestinationsSectionProps) 
         </div>
 
         {/* Destinations Grid */}
-        {/* BENTO GRID: 6 cards, grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 */}
+        {/* BENTO GRID: 8 cards, grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* col-1: Vihara | col-2: Barelang | col-3: TreasureBay */}
-          {/* col-1: Nongsa | col-2: Kelenteng | col-3: TamanRusa */}
+          {/* Row 1: col-1: Vihara | col-2: Barelang | col-3: TreasureBay */}
+          {/* Row 2: col-1: PuncakBeliung | col-2: Kelenteng | col-3: TamanRusa */}
+          {/* Row 3: col-1: MasjidSultan | col-2: WelcomeToBatam | col-3: empty */}
           {destinations.map((dest, i) =>
           <div
             key={i}
