@@ -5,7 +5,7 @@ import AppLogo from '@/components/ui/AppLogo';
 import Icon from '@/components/ui/AppIcon';
 import { useTheme } from '@/context/ThemeContext';
 
-type Lang = 'id' | 'en' | 'zh';
+type Lang = 'id' | 'en' | 'zh' | 'ms';
 
 interface HeaderProps {
   lang: Lang;
@@ -16,6 +16,7 @@ const navLabels: Record<Lang, { home: string; fleet: string; services: string; d
   id: { home: 'Beranda', fleet: 'Armada', services: 'Layanan', destinations: 'Destinasi', contact: 'Kontak', book: 'Pesan Sekarang' },
   en: { home: 'Home', fleet: 'Fleet', services: 'Services', destinations: 'Destinations', contact: 'Contact', book: 'Book Now' },
   zh: { home: '首页', fleet: '车队', services: '服务', destinations: '景点', contact: '联系', book: '立即预订' },
+  ms: { home: 'Utama', fleet: 'Armada', services: 'Perkhidmatan', destinations: 'Destinasi', contact: 'Hubungi', book: 'Tempah Sekarang' },
 };
 
 export default function Header({ lang, setLang }: HeaderProps) {
@@ -52,6 +53,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
     { code: 'id', label: 'Indonesia', flag: '🇮🇩' },
     { code: 'en', label: 'English', flag: '🇬🇧' },
     { code: 'zh', label: '中文', flag: '🇨🇳' },
+    { code: 'ms', label: 'Bahasa Melayu', flag: '🇲🇾' },
   ];
 
   const currentLang = langOptions.find((l) => l.code === lang)!;

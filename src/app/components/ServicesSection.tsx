@@ -3,7 +3,7 @@
 import React from 'react';
 import Icon from '@/components/ui/AppIcon';
 
-type Lang = 'id' | 'en' | 'zh';
+type Lang = 'id' | 'en' | 'zh' | 'ms';
 
 interface ServicesSectionProps {
   lang: Lang;
@@ -33,6 +33,12 @@ const sectionLabels: Record<Lang, {
     subtitle: '为游客和巴淡岛居民提供完整的交通解决方案。',
     ctaLabel: 'WhatsApp预订',
   },
+  ms: {
+    eyebrow: 'Perkhidmatan Kami',
+    title: 'Apa Yang Kami Tawarkan',
+    subtitle: 'Penyelesaian pengangkutan lengkap untuk pelancong dan penduduk Batam.',
+    ctaLabel: 'Tempah melalui WhatsApp',
+  },
 };
 
 interface ServiceItem {
@@ -40,9 +46,11 @@ interface ServiceItem {
   titleId: string;
   titleEn: string;
   titleZh: string;
+  titleMs: string;
   descId: string;
   descEn: string;
   descZh: string;
+  descMs: string;
   waMsg: string;
   color: string;
 }
@@ -53,9 +61,11 @@ const services: ServiceItem[] = [
     titleId: 'Antar Jemput Bandara',
     titleEn: 'Airport Transfer',
     titleZh: '机场接送',
+    titleMs: 'Transfer Lapangan Terbang',
     descId: 'Layanan antar jemput profesional ke/dari Bandara Internasional Hang Nadim Batam. Tepat waktu, nyaman, dan terpercaya.',
     descEn: 'Professional pick-up and drop-off to/from Hang Nadim International Airport. Punctual, comfortable, and reliable.',
     descZh: '专业接送服务，往返汉纳丁国际机场。准时、舒适、可靠。',
+    descMs: 'Perkhidmatan hantar dan ambil profesional ke/dari Lapangan Terbang Antarabangsa Hang Nadim Batam. Tepat pada masa, selesa, dan dipercayai.',
     waMsg: 'Halo Syawal Tour, saya butuh layanan antar jemput bandara. Mohon informasi lebih lanjut.',
     color: 'from-blue-600/20 to-blue-800/10',
   },
@@ -64,9 +74,11 @@ const services: ServiceItem[] = [
     titleId: 'Wisata Harian',
     titleEn: 'Daily Tour',
     titleZh: '一日游',
+    titleMs: 'Lawatan Harian',
     descId: 'Jelajahi destinasi wisata terbaik Batam — Vihara, Jembatan Barelang, Pantai, dan lebih banyak lagi bersama pemandu berpengalaman.',
     descEn: 'Explore Batam\'s best tourist destinations — Vihara, Barelang Bridge, Beaches, and more with experienced guides.',
     descZh: '探索巴淡岛最佳旅游目的地——寺庙、巴勒朗大桥、海滩等，由经验丰富的导游陪同。',
+    descMs: 'Terokai destinasi pelancongan terbaik Batam — Vihara, Jambatan Barelang, Pantai, dan banyak lagi dengan pemandu berpengalaman.',
     waMsg: 'Halo Syawal Tour, saya tertarik dengan paket wisata harian di Batam. Mohon informasi.',
     color: 'from-green-600/20 to-green-800/10',
   },
@@ -75,9 +87,11 @@ const services: ServiceItem[] = [
     titleId: 'Sewa Harian',
     titleEn: 'Daily Rental',
     titleZh: '日租服务',
+    titleMs: 'Sewa Harian',
     descId: 'Sewa kendaraan harian dengan atau tanpa sopir. Fleksibel, terjangkau, dan tersedia 24 jam untuk kebutuhan Anda.',
     descEn: 'Daily vehicle rental with or without driver. Flexible, affordable, and available 24 hours for your needs.',
     descZh: '提供带司机或不带司机的日租车服务。灵活、实惠，24小时随时可用。',
+    descMs: 'Sewa kenderaan harian dengan atau tanpa pemandu. Fleksibel, berpatutan, dan tersedia 24 jam untuk keperluan anda.',
     waMsg: 'Halo Syawal Tour, saya ingin informasi sewa kendaraan harian. Terima kasih.',
     color: 'from-accent/20 to-yellow-800/10',
   },
@@ -86,9 +100,11 @@ const services: ServiceItem[] = [
     titleId: 'Drop Antar Kota',
     titleEn: 'Intercity Drop',
     titleZh: '城际接送',
+    titleMs: 'Drop Antar Bandar',
     descId: 'Layanan antar kota dari/ke Batam ke berbagai destinasi di Kepulauan Riau dan sekitarnya. Aman dan nyaman.',
     descEn: 'Intercity transfer from/to Batam to various destinations in Riau Islands and surroundings. Safe and comfortable.',
     descZh: '从/到巴淡岛前往廖内群岛及周边各城市的城际接送服务。安全舒适。',
+    descMs: 'Perkhidmatan transfer antara bandar dari/ke Batam ke pelbagai destinasi di Kepulauan Riau dan sekitarnya. Selamat dan selesa.',
     waMsg: 'Halo Syawal Tour, saya butuh layanan drop antar kota. Mohon informasi lebih lanjut.',
     color: 'from-purple-600/20 to-purple-800/10',
   },
@@ -97,14 +113,15 @@ const services: ServiceItem[] = [
 export default function ServicesSection({ lang }: ServicesSectionProps) {
   const labels = sectionLabels[lang];
 
-  const getTitle = (s: ServiceItem) => lang === 'id' ? s.titleId : lang === 'en' ? s.titleEn : s.titleZh;
-  const getDesc = (s: ServiceItem) => lang === 'id' ? s.descId : lang === 'en' ? s.descEn : s.descZh;
+  const getTitle = (s: ServiceItem) => lang === 'id' ? s.titleId : lang === 'en' ? s.titleEn : lang === 'zh' ? s.titleZh : s.titleMs;
+  const getDesc = (s: ServiceItem) => lang === 'id' ? s.descId : lang === 'en' ? s.descEn : lang === 'zh' ? s.descZh : s.descMs;
 
   const buildWAMsg = (msg: string) => {
     const translated: Record<Lang, string> = {
       id: msg,
       en: msg.replace('Halo', 'Hello').replace('saya butuh', 'I need').replace('saya tertarik dengan', 'I am interested in').replace('saya ingin informasi', 'I want information about').replace('Mohon informasi lebih lanjut.', 'Please provide more information.').replace('Terima kasih.', 'Thank you.').replace('Mohon informasi.', 'Please provide information.'),
       zh: `您好 Syawal Tour，${msg.replace('Halo Syawal Tour, ', '').replace('Mohon informasi lebih lanjut.', '请提供更多信息。').replace('Terima kasih.', '谢谢。').replace('Mohon informasi.', '请提供信息。')}`,
+      ms: msg.replace('Halo', 'Hai').replace('butuh', 'perlukan').replace('tertarik dengan', 'berminat dengan').replace('ingin informasi', 'inginkan maklumat').replace('Mohon informasi lebih lanjut.', 'Sila berikan maklumat lanjut.').replace('Terima kasih.', 'Terima kasih.').replace('Mohon informasi.', 'Sila berikan maklumat.'),
     };
     return encodeURIComponent(translated[lang]);
   };

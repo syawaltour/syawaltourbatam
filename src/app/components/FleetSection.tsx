@@ -14,7 +14,7 @@ import coasterImg from '@/assets/images/coaster.png';
 import busMediumImg from '@/assets/images/bus-medium.png';
 import bigBusImg from '@/assets/images/big-bus.png';
 
-type Lang = 'id' | 'en' | 'zh';
+type Lang = 'id' | 'en' | 'zh' | 'ms';
 
 interface FleetSectionProps {
   lang: Lang;
@@ -59,6 +59,16 @@ const sectionLabels: Record<Lang, {
     capacity: '座位',
     type: '类型',
     currencies: '价格'
+  },
+  ms: {
+    eyebrow: 'Armada Kami',
+    title: 'Pilihan Kenderaan Premium',
+    subtitle: 'Dari kereta bandar hingga bas besar — semua tersedia untuk perjalanan anda di Batam.',
+    perDay: '/hari',
+    bookNow: 'Tempah Sekarang',
+    capacity: 'Kapasiti',
+    type: 'Jenis',
+    currencies: 'Harga'
   }
 };
 
@@ -215,7 +225,8 @@ export default function FleetSection({ lang }: FleetSectionProps) {
     const msgs: Record<Lang, string> = {
       id: `Halo Syawal Tour, saya mau pesan ${vehicleName} untuk [tanggal]. Terima kasih.`,
       en: `Hello Syawal Tour, I would like to book ${vehicleName} for [date]. Thank you.`,
-      zh: `您好 Syawal Tour，我想预订 ${vehicleName}，出行日期：[日期]。谢谢。`
+      zh: `您好 Syawal Tour，我想预订 ${vehicleName}，出行日期：[日期]。谢谢。`,
+      ms: `Hai Syawal Tour, saya ingin menempah ${vehicleName} untuk [tarikh]. Terima kasih.`
     };
     return encodeURIComponent(msgs[lang]);
   };

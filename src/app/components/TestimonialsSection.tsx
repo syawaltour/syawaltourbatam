@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 
-type Lang = 'id' | 'en' | 'zh';
+type Lang = 'id' | 'en' | 'zh' | 'ms';
 
 interface TestimonialsSectionProps {
   lang: Lang;
@@ -25,6 +25,11 @@ const sectionLabels: Record<Lang, {eyebrow: string;title: string;subtitle: strin
     eyebrow: '客户评价',
     title: '他们怎么说',
     subtitle: '数千名满意的客户已将他们的旅程托付给 Syawal Tour。'
+  },
+  ms: {
+    eyebrow: 'Testimoni Pelanggan',
+    title: 'Apa Mereka Katakan Tentang Kami',
+    subtitle: 'Ribuan pelanggan berpuas hati telah mempercayakan perjalanan mereka kepada Syawal Tour.'
   }
 };
 
@@ -36,6 +41,7 @@ interface Testimonial {
   textId: string;
   textEn: string;
   textZh: string;
+  textMs: string;
   vehicle: string;
   stars: number;
   flag: string;
@@ -51,6 +57,7 @@ const testimonials: Testimonial[] = [
   textId: 'Sangat memuaskan! Driver tepat waktu, mobil bersih dan nyaman. Antar jemput dari Bandara Hang Nadim berjalan lancar. Highly recommended untuk wisatawan dari Singapura!',
   textEn: 'Very satisfying! Driver was punctual, car was clean and comfortable. Airport transfer from Hang Nadim went smoothly. Highly recommended for tourists from Singapore!',
   textZh: '非常满意！司机准时，车辆干净舒适。从汉纳丁机场接送非常顺利。强烈推荐给来自新加坡的游客！',
+  textMs: 'Sangat memuaskan! Pemandu tepat pada masa, kereta bersih dan selesa. Perkhidmatan hantar ambil dari Lapangan Terbang Hang Nadim berjalan lancar. Sangat disyorkan untuk pelancong dari Singapura!',
   vehicle: 'Alphard VVIP',
   stars: 5
 },
@@ -63,6 +70,7 @@ const testimonials: Testimonial[] = [
   textId: 'Paket wisata harian ke Vihara dan Jembatan Barelang sangat berkesan. Guide ramah, harga sesuai. Kami bayar dengan MYR, tidak ada masalah sama sekali!',
   textEn: 'Daily tour package to the Vihara and Barelang Bridge was very memorable. Friendly guide, fair price. We paid in MYR, no issues at all!',
   textZh: '前往寺庙和巴勒朗大桥的一日游套餐非常难忘。导游友好，价格合理。我们用马来西亚林吉特支付，完全没有问题！',
+  textMs: 'Pakej lawatan harian ke Vihara dan Jambatan Barelang sangat bermakna. Pemandu yang mesra, harga yang berpatutan. Kami bayar dengan MYR, tiada masalah langsung!',
   vehicle: 'Innova Reborn',
   stars: 5
 },
@@ -75,6 +83,7 @@ const testimonials: Testimonial[] = [
   textId: 'Kami rombongan 15 orang dari China, sewa Bus Medium untuk wisata keliling Batam. Sopir sabar dan tahu rute. Bisa bayar SGD, sangat mudah!',
   textEn: 'We were a group of 15 from China, rented a Medium Bus for a tour around Batam. Patient driver who knows the routes. Can pay in SGD, very convenient!',
   textZh: '我们是15人的中国旅游团，租了中型巴士游览巴淡岛。司机耐心且熟悉路线。可以用新加坡元支付，非常方便！',
+  textMs: 'Kumpulan kami 15 orang dari China, sewa Bas Medium untuk lawatan keliling Batam. Pemandu sabar dan tahu laluan. Boleh bayar SGD, sangat mudah!',
   vehicle: 'Bus Medium',
   stars: 5
 },
@@ -87,6 +96,7 @@ const testimonials: Testimonial[] = [
   textId: 'Sudah beberapa kali pakai Syawal Tour untuk keperluan kantor. Armada selalu bersih, tepat waktu, dan harga kompetitif. Driver juga profesional!',
   textEn: 'I have used Syawal Tour several times for office needs. Fleet is always clean, punctual, and prices are competitive. Drivers are also professional!',
   textZh: '我多次使用 Syawal Tour 满足公司需求。车辆始终干净准时，价格有竞争力，司机也非常专业！',
+  textMs: 'Saya sudah beberapa kali menggunakan Syawal Tour untuk keperluan pejabat. Armada sentiasa bersih, tepat pada masa, dan harga kompetitif. Pemandu juga profesional!',
   vehicle: 'Fortuner VIP',
   stars: 5
 }];
@@ -96,7 +106,7 @@ export default function TestimonialsSection({ lang }: TestimonialsSectionProps) 
   const labels = sectionLabels[lang];
   const [activeIdx, setActiveIdx] = useState(0);
 
-  const getText = (t: Testimonial) => lang === 'id' ? t.textId : lang === 'en' ? t.textEn : t.textZh;
+  const getText = (t: Testimonial) => lang === 'id' ? t.textId : lang === 'en' ? t.textEn : lang === 'zh' ? t.textZh : t.textMs;
 
   const prev = () => setActiveIdx((i) => (i - 1 + testimonials.length) % testimonials.length);
   const next = () => setActiveIdx((i) => (i + 1) % testimonials.length);

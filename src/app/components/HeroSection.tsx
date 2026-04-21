@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 
-type Lang = 'id' | 'en' | 'zh';
+type Lang = 'id' | 'en' | 'zh' | 'ms';
 
 interface HeroSectionProps {
   lang: Lang;
@@ -57,6 +57,18 @@ const heroContent: Record<Lang, {
     stat1Val: '10+', stat1Label: '可用车辆',
     stat2Val: '24/7', stat2Label: '全天服务',
     stat3Val: 'MYR·SGD', stat3Label: '接受货币'
+  },
+  ms: {
+    eyebrow: 'Batam • Kepulauan Riau',
+    title1: 'SYAWAL',
+    title2: 'TOUR & TRAVEL',
+    subtitle: 'Sewa Kereta & Tour Dipercayai di Batam. Armada premium, pemandu profesional, sedia 24 jam.',
+    cta1: 'Tempah melalui WhatsApp',
+    cta2: 'Lihat Armada',
+    badge: 'Tersedia 24 Jam',
+    stat1Val: '10+', stat1Label: 'Armada Tersedia',
+    stat2Val: '24/7', stat2Label: 'Perkhidmatan Aktif',
+    stat3Val: 'MYR·SGD', stat3Label: 'Mata Wang Diterima'
   }
 };
 

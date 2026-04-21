@@ -11,7 +11,7 @@ import DestinationsSection from './components/DestinationsSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
 
-type Lang = 'id' | 'en' | 'zh';
+type Lang = 'id' | 'en' | 'zh' | 'ms';
 
 export default function HomePage() {
   const [lang, setLang] = useState<Lang>('id');

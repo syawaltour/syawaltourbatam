@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Icon from '@/components/ui/AppIcon';
 
-type Lang = 'id' | 'en' | 'zh';
+type Lang = 'id' | 'en' | 'zh' | 'ms';
 
 interface ContactSectionProps {
   lang: Lang;
@@ -72,6 +72,22 @@ const sectionContent: Record<Lang, {
     hoursLabel: '营业时间',
     hoursVal: '24小时 / 7天',
     currencyLabel: '接受货币',
+  },
+  ms: {
+    eyebrow: 'Hubungi Kami',
+    title: 'Tempah Sekarang',
+    subtitle: 'Hantar mesej dan kami akan membalas dengan segera melalui WhatsApp.',
+    namePlaceholder: 'Nama Penuh',
+    emailPlaceholder: 'Alamat E-mel',
+    phonePlaceholder: 'No. Telefon / WhatsApp',
+    messagePlaceholder: 'Mesej anda (kenderaan, tarikh, bilangan penumpang, dll.)',
+    submitBtn: 'Hantar via WhatsApp',
+    directWA: 'Chat Terus',
+    callUs: 'Hubungi Kami',
+    addressLabel: 'Alamat',
+    hoursLabel: 'Jam Operasi',
+    hoursVal: '24 Jam / 7 Hari',
+    currencyLabel: 'Mata Wang Diterima',
   },
 };
 

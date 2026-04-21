@@ -4,7 +4,7 @@ import React from 'react';
 import AppLogo from '@/components/ui/AppLogo';
 import Icon from '@/components/ui/AppIcon';
 
-type Lang = 'id' | 'en' | 'zh';
+type Lang = 'id' | 'en' | 'zh' | 'ms';
 
 interface FooterProps {
   lang: Lang;
@@ -46,6 +46,15 @@ const footerContent: Record<Lang, {
     privacy: '隐私',
     terms: '条款',
   },
+  ms: {
+    tagline: 'Perjalanan selesa, harga berpatutan.',
+    address: 'Simpang Kara, Ruko Kara Junction, Jl. Ahmad Yani Blok A No 2-3, Taman Baloi, Batam Kota, Kepulauan Riau 29432',
+    hours: 'Jam Operasi',
+    hoursVal: '24 Jam / 7 Hari',
+    currencies: 'Diterima: IDR • MYR • SGD',
+    privacy: 'Privasi',
+    terms: 'Terma',
+  },
 };
 
 export default function Footer({ lang }: FooterProps) {
@@ -85,11 +94,11 @@ export default function Footer({ lang }: FooterProps) {
           <div className="flex flex-col gap-6">
             <nav className="flex flex-wrap gap-x-8 gap-y-3">
               {[
-                { href: '#hero', label: lang === 'id' ? 'Beranda' : lang === 'en' ? 'Home' : '首页' },
-                { href: '#fleet', label: lang === 'id' ? 'Armada' : lang === 'en' ? 'Fleet' : '车队' },
-                { href: '#services', label: lang === 'id' ? 'Layanan' : lang === 'en' ? 'Services' : '服务' },
-                { href: '#destinations', label: lang === 'id' ? 'Destinasi' : lang === 'en' ? 'Destinations' : '景点' },
-                { href: '#contact', label: lang === 'id' ? 'Kontak' : lang === 'en' ? 'Contact' : '联系' },
+                { href: '#hero', label: lang === 'id' ? 'Beranda' : lang === 'en' ? 'Home' : lang === 'zh' ? '首页' : 'Utama' },
+                { href: '#fleet', label: lang === 'id' ? 'Armada' : lang === 'en' ? 'Fleet' : lang === 'zh' ? '车队' : 'Armada' },
+                { href: '#services', label: lang === 'id' ? 'Layanan' : lang === 'en' ? 'Services' : lang === 'zh' ? '服务' : 'Perkhidmatan' },
+                { href: '#destinations', label: lang === 'id' ? 'Destinasi' : lang === 'en' ? 'Destinations' : lang === 'zh' ? '景点' : 'Destinasi' },
+                { href: '#contact', label: lang === 'id' ? 'Kontak' : lang === 'en' ? 'Contact' : lang === 'zh' ? '联系' : 'Hubungi' },
               ].map((l) => (
                 <a key={l.href} href={l.href} className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors duration-200">
                   {l.label}
