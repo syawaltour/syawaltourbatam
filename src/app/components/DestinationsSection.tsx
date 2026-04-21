@@ -190,10 +190,10 @@ const destinations: Destination[] = [
   waKeyword: 'wisata ke Welcome to Batam'
 },
 {
-  nameId: 'Padang Golf Sukajadi',
-  nameEn: 'Sukajadi Golf Course',
+  nameId: 'Padang Golf',
+  nameEn:  'Golf Course',
   nameZh: '苏卡贾迪高尔夫球场',
-  nameMs: 'Padang Golf Sukajadi',
+  nameMs: 'Padang Golf',
   descId: 'Lapangan golf 18-hole dengan pemandangan laut yang indah. Fasilitas lengkap dengan clubhouse, restoran, dan pro shop. Cocok untuk pemula hingga profesional.',
   descEn: '18-hole golf course with beautiful sea views. Complete facilities including clubhouse, restaurant, and pro shop. Suitable for beginners to professionals.',
   descZh: '18洞高尔夫球场，拥有海景美景。设施齐全，包括会所、餐厅和专业用品店，适合从初学者到专业人士。',
@@ -202,7 +202,7 @@ const destinations: Destination[] = [
   imageAlt: 'Green golf course with manicured grass overlooking blue sea and skyline',
   tag: 'Golf',
   tagType: 'paid',
-  waKeyword: 'wisata ke Padang Golf Sukajadi'
+  waKeyword: 'wisata ke Padang Golf'
 }];
 
 
