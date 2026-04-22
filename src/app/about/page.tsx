@@ -1,27 +1,21 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SeoJsonLd from '@/components/SeoJsonLd';
 import GoogleReviewRequest from '@/app/components/GoogleReviewRequest';
 import SocialShareSection from '@/app/components/SocialShareSection';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Tentang Syawal Tour - Travel & Rental Mobil Terpercaya di Batam',
-  description: 'Kenali Syawal Tour and Travel, penyedia layanan rental mobil dan tour terpercaya di Batam sejak 2020. Armada lengkap, sopir profesional, harga terjangkau.',
-  keywords: ['tentang syawal tour', 'syawal tour batam', 'profil syawal tour', 'travel batam', 'rental mobil batam'],
-  openGraph: {
-    title: 'Tentang Syawal Tour - Travel & Rental Mobil Terpercaya di Batam',
-    description: 'Kenali Syawal Tour and Travel, penyedia layanan rental mobil dan tour terpercaya di Batam sejak 2020.',
-    url: '/about',
-  },
-};
+type Lang = 'id' | 'en' | 'zh' | 'ms';
 
 export default function AboutPage() {
+  const [lang, setLang] = useState<Lang>('id');
+
   return (
     <>
       <SeoJsonLd />
-      <Header lang="id" setLang={() => {}} />
+      <Header lang={lang} setLang={setLang} />
 
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
@@ -199,7 +193,7 @@ export default function AboutPage() {
         />
       </main>
 
-      <Footer lang="id" />
+      <Footer lang={lang} />
 
       {/* Floating WhatsApp */}
       <a

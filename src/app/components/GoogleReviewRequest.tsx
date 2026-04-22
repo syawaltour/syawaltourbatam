@@ -118,8 +118,8 @@ const reviewContent: Record<Lang, {
   },
 };
 
-// Replace with your actual Google Business Profile URL
-const GOOGLE_BUSINESS_URL = 'https://g.page/r/syawal-tour-batam/review';
+// Google Business Profile URL untuk Syawal Tour
+const GOOGLE_BUSINESS_URL = 'https://www.google.com/search?kgmid=/g/11z5890c6b&hl=en-ID&q=Syawal+Tour&shndl=30&source=sh/x/loc/osrp/m5/1&kgs=0ede12b39a299a92&utm_source=sh/x/loc/osrp/m5/1#lrd=0x31d98fc6320b451b:0x1a68745d6b431c99,3';
 
 export default function GoogleReviewRequest({ lang }: GoogleReviewRequestProps) {
   const [submitted, setSubmitted] = useState(false);
