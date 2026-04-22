@@ -22,27 +22,43 @@ const faqContent: Record<Lang, {
     faqs: [
       {
         q: 'Apa itu Syawal Tour?',
-        a: 'Syawal Tour adalah perusahaan travel dan rental mobil terpercaya di Batam. Kami menyediakan layanan rental mobil, tour package, dan antar jemput bandara dengan harga terjangkau dan pelayanan 24 jam.',
+        a: 'Syawal Tour adalah perusahaan travel dan rental mobil terpercaya di Batam sejak 2020. Kami menyediakan layanan rental mobil, tour package, dan antar jemput bandara dengan harga terjangkau dan pelayanan 24 jam. Melayani ribuan pelanggan lokal dan internasional dengan dedikasi tinggi.',
       },
       {
         q: 'Bagaimana cara booking di Syawal Tour?',
-        a: 'Booking di Syawal Tour sangat mudah. Cukup hubungi kami via WhatsApp di +6281269065423, kami akan segera merespon dan membantu Anda memilih armada yang sesuai dengan kebutuhan.',
+        a: 'Booking di Syawal Tour sangat mudah. Cukup hubungi kami via WhatsApp di +6281269065423, kami akan segera merespon dan membantu Anda memilih armada yang sesuai dengan kebutuhan. Bisa juga booking via website syawaltour.com.',
       },
       {
         q: 'Berapa harga rental mobil di Syawal Tour?',
-        a: 'Harga rental mobil di Syawal Tour bervariasi tergantung jenis armada dan durasi sewa. Kami menawarkan harga kompetitif dan transparan. Hubungi kami untuk penawaran terbaik.',
+        a: 'Harga rental mobil di Syawal Tour bervariasi tergantung jenis armada dan durasi sewa. Mulai dari Rp 350.000/hari untuk city car, Rp 500.000/hari untuk MPV seperti Avanza/Innova. Hubungi kami untuk penawaran terbaik dengan harga spesial untuk long term rental.',
       },
       {
         q: 'Apakah Syawal Tour menerima pembayaran SGD dan MYR?',
-        a: 'Ya, Syawal Tour menerima pembayaran dalam berbagai mata uang termasuk SGD dan MYR. Ini memudahkan wisatawan dari Singapura dan Malaysia.',
+        a: 'Ya, Syawal Tour menerima pembayaran dalam berbagai mata uang termasuk SGD dan MYR dengan kurs kompetitif. Ini memudahkan wisatawan dari Singapura dan Malaysia. Kami juga terima transfer bank dan e-wallet.',
       },
       {
         q: 'Destinasi wisata apa saja yang ditawarkan Syawal Tour?',
-        a: 'Syawal Tour menawarkan paket wisata ke berbagai destinasi populer di Batam seperti Maha Vihara Duta Maitreya, Jembatan Barelang, Treasure Bay, dan banyak lagi.',
+        a: 'Syawal Tour menawarkan paket wisata ke berbagai destinasi populer di Batam seperti Maha Vihara Duta Maitreya (vihara Buddha terbesar di Asia Tenggara), Jembatan Barelang, Treasure Bay, Pantai Nongsa, Ocarina Park, dan berbagai tempat kuliner seafood halal.',
       },
       {
         q: 'Apakah sopir Syawal Tour berpengalaman?',
-        a: 'Ya, semua sopir Syawal Tour adalah profesional berpengalaman yang mengenal baik rute di Batam dan siap memberikan pelayanan terbaik untuk kenyamanan perjalanan Anda.',
+        a: 'Ya, semua sopir Syawal Tour adalah profesional berpengalaman dengan minimum 3 tahun pengalaman. Mereka mengenal baik rute di Batam, ramah, dan siap memberikan pelayanan terbaik untuk kenyamanan perjalanan Anda. Bisa juga menjadi tour guide.',
+      },
+      {
+        q: 'Apakah ada paket tour untuk wisata religi ke Maha Vihara?',
+        a: 'Ya, Syawal Tour memiliki paket khusus wisata religi ke Maha Vihara Duta Maitreya. Paket termasuk mobil, sopir, dan bisa di-request untuk wait di lokasi. Sangat cocok untuk rombongan dari Singapura dan Malaysia.',
+      },
+      {
+        q: 'Apakah bisa sewa mobil lepas kunci (tanpa sopir)?',
+        a: 'Ya, Syawal Tour menyediakan opsi sewa mobil lepas kunci dengan syarat melengkapi dokumen (KTP/SIM untuk lokal, Passport untuk turis). Deposit diperlukan sebagai jaminan. Namun untuk kenyamanan, kami sarankan sewa dengan sopir.',
+      },
+      {
+        q: 'Apakah Syawal Tour melayani antar jemput dari Singapura?',
+        a: 'Ya, kami melayani penjemputan dari Singapura via ferry terminal. Driver kami akan menunggu di Harbour Bay atau Sekupang Ferry Terminal sesuai jadwal kedatangan ferry Anda.',
+      },
+      {
+        q: 'Bagaimana jika mobil mogok di tengah perjalanan?',
+        a: 'Jika terjadi kendala, segera hubungi kami via WhatsApp 24 jam. Kami akan mengirim mobil pengganti atau mekanik untuk memperbaiki. Armada Syawal Tour selalu di-maintenance berkala untuk meminimalisir masalah.',
       },
     ],
   },
@@ -52,27 +68,43 @@ const faqContent: Record<Lang, {
     faqs: [
       {
         q: 'What is Syawal Tour?',
-        a: 'Syawal Tour is a trusted travel and car rental company in Batam. We provide car rental, tour packages, and airport transfer services at affordable prices with 24-hour service.',
+        a: 'Syawal Tour is a trusted travel and car rental company in Batam since 2020. We provide car rental, tour packages, and airport transfer services at affordable prices with 24-hour service. Serving thousands of local and international customers with high dedication.',
       },
       {
         q: 'How to book with Syawal Tour?',
-        a: 'Booking with Syawal Tour is easy. Simply contact us via WhatsApp at +6281269065423, and we will respond immediately to help you choose the right vehicle.',
+        a: 'Booking with Syawal Tour is easy. Simply contact us via WhatsApp at +6281269065423, and we will respond immediately to help you choose the right vehicle. You can also book via our website syawaltour.com.',
       },
       {
         q: 'How much is car rental at Syawal Tour?',
-        a: 'Car rental prices at Syawal Tour vary depending on the vehicle type and duration. We offer competitive and transparent pricing. Contact us for the best deal.',
+        a: 'Car rental prices at Syawal Tour vary depending on vehicle type and duration. Starting from Rp 350.000/day for city cars, Rp 500.000/day for MPV like Avanza/Innova. Contact us for the best deal with special rates for long term rental.',
       },
       {
         q: 'Does Syawal Tour accept SGD and MYR?',
-        a: 'Yes, Syawal Tour accepts payment in various currencies including SGD and MYR. This makes it convenient for tourists from Singapore and Malaysia.',
+        a: 'Yes, Syawal Tour accepts payment in various currencies including SGD and MYR at competitive rates. This makes it convenient for tourists from Singapore and Malaysia. We also accept bank transfer and e-wallets.',
       },
       {
         q: 'What destinations does Syawal Tour offer?',
-        a: 'Syawal Tour offers tour packages to popular destinations in Batam such as Maha Vihara Duta Maitreya, Barelang Bridge, Treasure Bay, and more.',
+        a: 'Syawal Tour offers tour packages to popular destinations in Batam such as Maha Vihara Duta Maitreya (largest Buddhist temple in Southeast Asia), Barelang Bridge, Treasure Bay, Nongsa Beach, Ocarina Park, and various halal seafood restaurants.',
       },
       {
         q: 'Are Syawal Tour drivers experienced?',
-        a: 'Yes, all Syawal Tour drivers are experienced professionals who know Batam routes well and are ready to provide excellent service for your journey.',
+        a: 'Yes, all Syawal Tour drivers are experienced professionals with minimum 3 years experience. They know Batam routes well, friendly, and ready to provide excellent service for your journey. Can also act as tour guides.',
+      },
+      {
+        q: 'Is there a religious tour package to Maha Vihara?',
+        a: 'Yes, Syawal Tour has special packages for religious tours to Maha Vihara Duta Maitreya. Package includes car, driver, and can request to wait at location. Perfect for groups from Singapore and Malaysia.',
+      },
+      {
+        q: 'Can I rent a car without driver (self-drive)?',
+        a: 'Yes, Syawal Tour provides self-drive car rental with document requirements (KTP/SIM for locals, Passport for tourists). Deposit required as security. However, for comfort, we recommend renting with a driver.',
+      },
+      {
+        q: 'Does Syawal Tour serve pickup from Singapore?',
+        a: 'Yes, we serve pickup from Singapore via ferry terminal. Our driver will wait at Harbour Bay or Sekupang Ferry Terminal according to your ferry arrival schedule.',
+      },
+      {
+        q: 'What if the car breaks down during the trip?',
+        a: 'If any issue occurs, immediately contact us via WhatsApp 24 hours. We will send a replacement car or mechanic to fix it. Syawal Tour fleet is regularly maintained to minimize problems.',
       },
     ],
   },
@@ -112,27 +144,43 @@ const faqContent: Record<Lang, {
     faqs: [
       {
         q: 'Apa itu Syawal Tour?',
-        a: 'Syawal Tour adalah syarikat travel dan sewa kereta yang dipercayai di Batam. Kami menyediakan perkhidmatan sewa kereta, pakej pelancongan, dan pemindahan lapangan terbang pada harga berpatutan dengan perkhidmatan 24 jam.',
+        a: 'Syawal Tour adalah syarikat travel dan sewa kereta yang dipercayai di Batam sejak 2020. Kami menyediakan perkhidmatan sewa kereta, pakej pelancongan, dan pemindahan lapangan terbang pada harga berpatutan dengan perkhidmatan 24 jam. Melayani ribuan pelanggan lokal dan antarabangsa dengan dedikasi tinggi.',
       },
       {
         q: 'Bagaimana untuk menempah dengan Syawal Tour?',
-        a: 'Menempah dengan Syawal Tour sangat mudah. Hubungi kami melalui WhatsApp di +6281269065423, dan kami akan segera respond dan membantu anda memilih kenderaan yang sesuai.',
+        a: 'Menempah dengan Syawal Tour sangat mudah. Hubungi kami melalui WhatsApp di +6281269065423, dan kami akan segera respond dan membantu anda memilih kenderaan yang sesuai. Boleh juga tempah melalui laman web syawaltour.com.',
       },
       {
         q: 'Berapa harga sewa kereta di Syawal Tour?',
-        a: 'Harga sewa kereta di Syawal Tour berbeza-beza bergantung kepada jenis kenderaan dan tempoh sewa. Kami menawarkan harga yang kompetitif dan telus. Hubungi kami untuk tawaran terbaik.',
+        a: 'Harga sewa kereta di Syawal Tour berbeza-beza bergantung kepada jenis kenderaan dan tempoh sewa. Bermula dari Rp 350.000/hari untuk kereta bandar, Rp 500.000/hari untuk MPV seperti Avanza/Innova. Hubungi kami untuk tawaran terbaik dengan harga istimewa untuk sewa jangka panjang.',
       },
       {
         q: 'Adakah Syawal Tour menerima SGD dan MYR?',
-        a: 'Ya, Syawal Tour menerima pembayaran dalam pelbagai mata wang termasuk SGD dan MYR. Ini memudahkan pelancong dari Singapura dan Malaysia.',
+        a: 'Ya, Syawal Tour menerima pembayaran dalam pelbagai mata wang termasuk SGD dan MYR dengan kadar kompetitif. Ini memudahkan pelancong dari Singapura dan Malaysia. Kami juga terima pemindahan bank dan e-wallet.',
       },
       {
         q: 'Destinasi pelancongan apa yang ditawarkan oleh Syawal Tour?',
-        a: 'Syawal Tour menawarkan pakej pelancongan ke destinasi popular di Batam seperti Maha Vihara Duta Maitreya, Jambatan Barelang, Teluk Bayan, dan banyak lagi.',
+        a: 'Syawal Tour menawarkan pakej pelancongan ke destinasi popular di Batam seperti Maha Vihara Duta Maitreya (kuil Buddha terbesar di Asia Tenggara), Jambatan Barelang, Treasure Bay, Pantai Nongsa, Ocarina Park, dan pelbagai restoran seafood halal.',
       },
       {
         q: 'Adakah pemandu Syawal Tour berpengalaman?',
-        a: 'Ya, semua pemandu Syawal Tour adalah profesional berpengalaman yang mengetahui laluan di Batam dengan baik dan sedia memberikan perkhidmatan terbaik untuk perjalanan anda.',
+        a: 'Ya, semua pemandu Syawal Tour adalah profesional berpengalaman dengan minimum 3 tahun pengalaman. Mereka mengetahui laluan di Batam dengan baik, mesra, dan sedia memberikan perkhidmatan terbaik untuk perjalanan anda. Boleh juga menjadi pemandu pelancongan.',
+      },
+      {
+        q: 'Adakah terdapat pakej pelancongan agama ke Maha Vihara?',
+        a: 'Ya, Syawal Tour mempunyai pakej khusus untuk pelancongan agama ke Maha Vihara Duta Maitreya. Pakej termasuk kereta, pemandu, dan boleh meminta untuk menunggu di lokasi. Sangat sesuai untuk kumpulan dari Singapura dan Malaysia.',
+      },
+      {
+        q: 'Bolehkah saya sewa kereta tanpa pemandu (pandu sendiri)?',
+        a: 'Ya, Syawal Tour menyediakan pilihan sewa kereta tanpa pemandu dengan syarat dokumen (KTP/SIM untuk lokal, Passport untuk pelancong). Deposit diperlukan sebagai jaminan. Walau bagaimanapun, untuk keselesaan, kami syorkan sewa dengan pemandu.',
+      },
+      {
+        q: 'Adakah Syawal Tour melayani penjemputan dari Singapura?',
+        a: 'Ya, kami melayani penjemputan dari Singapura melalui terminal ferry. Pemandu kami akan menunggu di Harbour Bay atau Sekupang Ferry Terminal mengikut jadual ketibaan ferry anda.',
+      },
+      {
+        q: 'Bagaimana jika kereta rosak di tengah perjalanan?',
+        a: 'Jika berlaku masalah, hubungi kami segera melalui WhatsApp 24 jam. Kami akan menghantar kereta pengganti atau mekanik untuk membaikinya. Armada Syawal Tour sentiasa diselenggara secara berkala untuk meminimumkan masalah.',
       },
     ],
   },

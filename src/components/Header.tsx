@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import AppLogo from '@/components/ui/AppLogo';
 import Icon from '@/components/ui/AppIcon';
 import { useTheme } from '@/context/ThemeContext';
+import { usePathname } from 'next/navigation';
 
 type Lang = 'id' | 'en' | 'zh' | 'ms';
 
@@ -25,6 +26,8 @@ export default function Header({ lang, setLang }: HeaderProps) {
   const [langOpen, setLangOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const labels = navLabels[lang];
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -42,11 +45,11 @@ export default function Header({ lang, setLang }: HeaderProps) {
   }, [menuOpen]);
 
   const navLinks = [
-    { href: '#hero', label: labels.home },
-    { href: '#fleet', label: labels.fleet },
-    { href: '#services', label: labels.services },
-    { href: '#destinations', label: labels.destinations },
-    { href: '#contact', label: labels.contact },
+    { href: isHomePage ? '#hero' : '/#hero', label: labels.home },
+    { href: isHomePage ? '#fleet' : '/#fleet', label: labels.fleet },
+    { href: isHomePage ? '#services' : '/#services', label: labels.services },
+    { href: isHomePage ? '#destinations' : '/#destinations', label: labels.destinations },
+    { href: isHomePage ? '#contact' : '/#contact', label: labels.contact },
   ];
 
   const langOptions: { code: Lang; label: string; flag: string }[] = [
@@ -70,7 +73,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
           <a
-            href="#hero"
+            href={isHomePage ? '#hero' : '/'}
             className="flex items-center gap-3 group"
             onClick={() => setMenuOpen(false)}
           >
