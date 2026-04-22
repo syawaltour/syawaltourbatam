@@ -10,6 +10,7 @@ import ServicesSection from './components/ServicesSection';
 import DestinationsSection from './components/DestinationsSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
+import FaqSection from './components/FaqSection';
 
 type Lang = 'id' | 'en' | 'zh' | 'ms';
 
@@ -56,6 +57,7 @@ export default function HomePage() {
         <ServicesSection lang={lang} />
         <DestinationsSection lang={lang} />
         <TestimonialsSection lang={lang} />
+        <FaqSection lang={lang} />
         <ContactSection lang={lang} />
       </main>
 

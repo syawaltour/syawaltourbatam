@@ -22,8 +22,27 @@ export const metadata: Metadata = {
     default: 'Syawal Tour and Travel — Rental Mobil & Tour Batam',
     template: '%s | Syawal Tour'
   },
-  description: 'Rental mobil & tour terpercaya di Batam. Armada premium, harga terjangkau, terima SGD, MYR. Pesan via WhatsApp, layanan 24 jam. Melayani tour Maha Vihara Duta Maitreya, Jembatan Barelang, Treasure Bay, dan destinasi populer lainnya.',
-  keywords: ['syawal tour', 'syawal tour batam', 'syawaltour', 'tour batam', 'travel batam', 'batam travel', 'rental mobil batam', 'sewa mobil batam', 'wisata batam', 'maha vihara duta maitreya', 'jembatan barelang', 'treasure bay batam', 'rent car batam', 'batam car rental'],
+  description: 'Syawal Tour Batam - Rental mobil & tour terpercaya. Sewa mobil, Hiace, Bus untuk tour Batam. Terima SGD/MYR, 24 jam service. Melayani Maha Vihara, Jembatan Barelang, Treasure Bay.',
+  keywords: [
+    // Indonesia
+    'syawal tour', 'syawal tour batam', 'syawal tour batam city', 'syawal travel',
+    'travel batam', 'travel murah', 'sewa bus batam', 'sewa mobil batam',
+    'rental mobil batam', 'tour batam', 'sewa hiace batam', 'rental mobil murah batam',
+    'paket tour batam', 'wisata batam', 'antar jemput bandara batam', 'travel batam terpercaya',
+    'rental mobil batam 24 jam', 'sewa alphard batam', 'sewa fortuner batam', 'batam car rental',
+    // English
+    'syawal tour', 'syawal tour batam', 'syawal tour batam city', 'syawal travel',
+    'batam travel', 'cheap travel', 'bus rental batam', 'car rental batam',
+    'batam car hire', 'batam tour', 'hiace rental batam', 'cheap car rental batam',
+    'batam tour package', 'batam tourism', 'batam airport transfer', 'trusted travel batam',
+    '24 hour car rental batam', 'alphard rental batam', 'fortuner rental batam',
+    // Malay
+    'syawal tour', 'syawal tour batam', 'syawal tour batam city', 'syawal travel',
+    'travel batam', 'travel murah', 'sewa bas batam', 'sewa kereta batam',
+    'kereta sewa batam', 'tour batam', 'sewa hiace batam', 'sewa kereta murah batam',
+    'pakej tour batam', 'pelancongan batam', 'hantar ambil lapangan terbang batam',
+    'travel dipercayai batam', 'sewa kereta 24 jam batam'
+  ],
   authors: [{ name: 'Syawal Tour and Travel' }],
   creator: 'Syawal Tour and Travel',
   publisher: 'Syawal Tour and Travel',

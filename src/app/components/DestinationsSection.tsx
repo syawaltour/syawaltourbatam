@@ -19,33 +19,33 @@ const sectionLabels: Record<Lang, {
   paid: string;
 }> = {
   id: {
-    eyebrow: 'Destinasi Wisata',
-    title: 'Jelajahi Batam Bersama Kami',
-    subtitle: 'Dari vihara megah hingga pantai indah — kami antar Anda ke semua destinasi terbaik di Batam.',
+    eyebrow: 'Destinasi Syawal Tour',
+    title: 'Paket Tour Syawal Tour',
+    subtitle: 'Dari vihara megah hingga pantai indah — Syawal Tour antar Anda ke semua destinasi terbaik di Batam.',
     explore: 'Jelajahi',
     free: 'Gratis',
     paid: 'Berbayar'
   },
   en: {
-    eyebrow: 'Tourist Destinations',
-    title: 'Explore Batam With Us',
-    subtitle: 'From grand temples to beautiful beaches — we take you to all the best destinations in Batam.',
+    eyebrow: 'Syawal Tour Destinations',
+    title: 'Syawal Tour Packages',
+    subtitle: 'From grand temples to beautiful beaches — Syawal Tour takes you to all the best destinations in Batam.',
     explore: 'Explore',
     free: 'Free',
     paid: 'Paid'
   },
   zh: {
-    eyebrow: '旅游景点',
-    title: '与我们一起探索巴淡岛',
-    subtitle: '从宏伟的寺庙到美丽的海滩——我们带您前往巴淡岛所有最佳目的地。',
+    eyebrow: 'Syawal Tour 景点',
+    title: 'Syawal Tour 套餐',
+    subtitle: '从宏伟的寺庙到美丽的海滩——Syawal Tour 带您前往巴淡岛所有最佳目的地。',
     explore: '探索',
     free: '免费',
     paid: '收费'
   },
   ms: {
-    eyebrow: 'Destinasi Pelancongan',
-    title: 'Terokai Batam Bersama Kami',
-    subtitle: 'Dari tokong agam yang megah sehingga ke pantai yang indah — kami bawa anda ke semua destinasi terbaik di Batam.',
+    eyebrow: 'Destinasi Syawal Tour',
+    title: 'Pakej Syawal Tour',
+    subtitle: 'Dari tokong agam yang megah sehingga ke pantai yang indah — Syawal Tour bawa anda ke semua destinasi terbaik di Batam.',
     explore: 'Terokai',
     free: 'Percuma',
     paid: 'Berbayar'

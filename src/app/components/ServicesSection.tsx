@@ -16,27 +16,27 @@ const sectionLabels: Record<Lang, {
   ctaLabel: string;
 }> = {
   id: {
-    eyebrow: 'Layanan Kami',
-    title: 'Apa yang Kami Tawarkan',
-    subtitle: 'Solusi transportasi lengkap untuk wisatawan dan warga Batam.',
+    eyebrow: 'Layanan Syawal Tour',
+    title: 'Layanan Syawal Tour Batam',
+    subtitle: 'Solusi transportasi lengkap dari Syawal Tour untuk wisatawan dan warga Batam.',
     ctaLabel: 'Pesan via WhatsApp',
   },
   en: {
-    eyebrow: 'Our Services',
-    title: 'What We Offer',
-    subtitle: 'Complete transportation solutions for tourists and Batam residents.',
+    eyebrow: 'Syawal Tour Services',
+    title: 'Services by Syawal Tour',
+    subtitle: 'Complete transportation solutions by Syawal Tour for tourists and Batam residents.',
     ctaLabel: 'Book via WhatsApp',
   },
   zh: {
-    eyebrow: '我们的服务',
-    title: '我们提供什么',
-    subtitle: '为游客和巴淡岛居民提供完整的交通解决方案。',
+    eyebrow: 'Syawal Tour 服务',
+    title: 'Syawal Tour 服务',
+    subtitle: 'Syawal Tour 为游客和巴淡岛居民提供完整的交通解决方案。',
     ctaLabel: 'WhatsApp预订',
   },
   ms: {
-    eyebrow: 'Perkhidmatan Kami',
-    title: 'Apa Yang Kami Tawarkan',
-    subtitle: 'Penyelesaian pengangkutan lengkap untuk pelancong dan penduduk Batam.',
+    eyebrow: 'Perkhidmatan Syawal Tour',
+    title: 'Perkhidmatan Syawal Tour',
+    subtitle: 'Penyelesaian pengangkutan lengkap oleh Syawal Tour untuk pelancong dan penduduk Batam.',
     ctaLabel: 'Tempah melalui WhatsApp',
   },
 };

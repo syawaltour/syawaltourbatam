@@ -31,9 +31,9 @@ const sectionLabels: Record<Lang, {
   currencies: string;
 }> = {
   id: {
-    eyebrow: 'Armada Kami',
-    title: 'Pilihan Kendaraan Premium',
-    subtitle: 'Dari city car hingga bus besar — semua tersedia untuk perjalanan Anda di Batam.',
+    eyebrow: 'Armada Syawal Tour',
+    title: 'Armada Syawal Tour Batam',
+    subtitle: 'Dari city car hingga bus besar — semua tersedia di Syawal Tour untuk perjalanan Anda.',
     perDay: '/hari',
     bookNow: 'Pesan Sekarang',
     capacity: 'Kapasitas',
@@ -41,9 +41,9 @@ const sectionLabels: Record<Lang, {
     currencies: 'Harga'
   },
   en: {
-    eyebrow: 'Our Fleet',
-    title: 'Premium Vehicle Selection',
-    subtitle: 'From city cars to large buses — all available for your journey in Batam.',
+    eyebrow: 'Syawal Tour Fleet',
+    title: 'Syawal Tour Fleet',
+    subtitle: 'From city cars to large buses — all available at Syawal Tour for your journey.',
     perDay: '/day',
     bookNow: 'Book Now',
     capacity: 'Capacity',
@@ -51,9 +51,9 @@ const sectionLabels: Record<Lang, {
     currencies: 'Price'
   },
   zh: {
-    eyebrow: '我们的车队',
-    title: '豪华车辆选择',
-    subtitle: '从城市轿车到大型巴士——所有车辆均可用于您在巴淡岛的旅途。',
+    eyebrow: 'Syawal Tour 车队',
+    title: 'Syawal Tour 车队',
+    subtitle: '从城市轿车到大型巴士——Syawal Tour 所有车辆均可用于您的旅途。',
     perDay: '/天',
     bookNow: '立即预订',
     capacity: '座位',
