@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: 'Syawal Tour and Travel',
     images: [
       {
-        url: '/assets/images/syawal-logo.png',
+        url: '/syawal-logo.png',
         width: 1200,
         height: 630,
         alt: 'Syawal Tour and Travel Batam',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Syawal Tour and Travel — Rental Mobil & Tour Batam',
     description: 'Rental mobil & tour terpercaya di Batam. Armada premium, harga terjangkau, terima SGD, MYR. Pesan via WhatsApp, layanan 24 jam.',
-    images: ['/assets/images/syawal-logo.png'],
+    images: ['/syawal-logo.png'],
     creator: '@syawaltour',
   },
   robots: {
@@ -97,8 +97,8 @@ export default function RootLayout({
     name: 'Syawal Tour and Travel',
     alternateName: 'Syawal Tour',
     url: baseUrl,
-    logo: `${baseUrl}/assets/images/syawal-logo.png`,
-    image: `${baseUrl}/assets/images/syawal-logo.png`,
+    logo: `${baseUrl}/syawal-logo.png`,
+    image: `${baseUrl}/syawal-logo.png`,
     description: 'Rental mobil & tour terpercaya di Batam. Armada premium, harga terjangkau, terima SGD, MYR.',
     telephone: '+6281269065423',
     email: 'info@syawaltour.com',
@@ -121,8 +121,8 @@ export default function RootLayout({
     alternateName: 'Syawal Tour',
     description: 'Rental mobil & tour terpercaya di Batam. Armada premium, harga terjangkau, terima SGD, MYR.',
     url: baseUrl,
-    logo: `${baseUrl}/assets/images/syawal-logo.png`,
-    image: `${baseUrl}/assets/images/syawal-logo.png`,
+    logo: `${baseUrl}/syawal-logo.png`,
+    image: `${baseUrl}/syawal-logo.png`,
     telephone: '+6281269065423',
     email: 'info@syawaltour.com',
     address: {
