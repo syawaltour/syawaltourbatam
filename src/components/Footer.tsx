@@ -3,6 +3,7 @@
 import React from 'react';
 import AppLogo from '@/components/ui/AppLogo';
 import Icon from '@/components/ui/AppIcon';
+import { usePathname } from 'next/navigation';
 
 type Lang = 'id' | 'en' | 'zh' | 'ms';
 
@@ -58,6 +59,8 @@ const footerContent: Record<Lang, {
 };
 
 export default function Footer({ lang }: FooterProps) {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
   const c = footerContent[lang];
   const year = 2026;
 
@@ -94,11 +97,12 @@ export default function Footer({ lang }: FooterProps) {
           <div className="flex flex-col gap-6">
             <nav className="flex flex-wrap gap-x-8 gap-y-3">
               {[
-                { href: '#hero', label: lang === 'id' ? 'Beranda' : lang === 'en' ? 'Home' : lang === 'zh' ? '首页' : 'Utama' },
-                { href: '#fleet', label: lang === 'id' ? 'Armada' : lang === 'en' ? 'Fleet' : lang === 'zh' ? '车队' : 'Armada' },
-                { href: '#services', label: lang === 'id' ? 'Layanan' : lang === 'en' ? 'Services' : lang === 'zh' ? '服务' : 'Perkhidmatan' },
-                { href: '#destinations', label: lang === 'id' ? 'Destinasi' : lang === 'en' ? 'Destinations' : lang === 'zh' ? '景点' : 'Destinasi' },
-                { href: '#contact', label: lang === 'id' ? 'Kontak' : lang === 'en' ? 'Contact' : lang === 'zh' ? '联系' : 'Hubungi' },
+                { href: isHomePage ? '#hero' : '/#hero', label: lang === 'id' ? 'Beranda' : lang === 'en' ? 'Home' : lang === 'zh' ? '首页' : 'Utama' },
+                { href: '/about', label: lang === 'id' ? 'Tentang' : lang === 'en' ? 'About' : lang === 'zh' ? '关于' : 'Tentang' },
+                { href: isHomePage ? '#fleet' : '/#fleet', label: lang === 'id' ? 'Armada' : lang === 'en' ? 'Fleet' : lang === 'zh' ? '车队' : 'Armada' },
+                { href: isHomePage ? '#services' : '/#services', label: lang === 'id' ? 'Layanan' : lang === 'en' ? 'Services' : lang === 'zh' ? '服务' : 'Perkhidmatan' },
+                { href: isHomePage ? '#destinations' : '/#destinations', label: lang === 'id' ? 'Destinasi' : lang === 'en' ? 'Destinations' : lang === 'zh' ? '景点' : 'Destinasi' },
+                { href: isHomePage ? '#contact' : '/#contact', label: lang === 'id' ? 'Kontak' : lang === 'en' ? 'Contact' : lang === 'zh' ? '联系' : 'Hubungi' },
               ].map((l) => (
                 <a key={l.href} href={l.href} className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors duration-200">
                   {l.label}

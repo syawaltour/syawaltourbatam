@@ -13,11 +13,11 @@ interface HeaderProps {
   setLang: (l: Lang) => void;
 }
 
-const navLabels: Record<Lang, { home: string; fleet: string; services: string; destinations: string; contact: string; book: string }> = {
-  id: { home: 'Beranda', fleet: 'Armada', services: 'Layanan', destinations: 'Destinasi', contact: 'Kontak', book: 'Pesan Sekarang' },
-  en: { home: 'Home', fleet: 'Fleet', services: 'Services', destinations: 'Destinations', contact: 'Contact', book: 'Book Now' },
-  zh: { home: '首页', fleet: '车队', services: '服务', destinations: '景点', contact: '联系', book: '立即预订' },
-  ms: { home: 'Utama', fleet: 'Armada', services: 'Perkhidmatan', destinations: 'Destinasi', contact: 'Hubungi', book: 'Tempah Sekarang' },
+const navLabels: Record<Lang, { home: string; about: string; fleet: string; services: string; destinations: string; contact: string; book: string }> = {
+  id: { home: 'Beranda', about: 'Tentang', fleet: 'Armada', services: 'Layanan', destinations: 'Destinasi', contact: 'Kontak', book: 'Pesan Sekarang' },
+  en: { home: 'Home', about: 'About', fleet: 'Fleet', services: 'Services', destinations: 'Destinations', contact: 'Contact', book: 'Book Now' },
+  zh: { home: '首页', about: '关于', fleet: '车队', services: '服务', destinations: '景点', contact: '联系', book: '立即预订' },
+  ms: { home: 'Utama', about: 'Tentang', fleet: 'Armada', services: 'Perkhidmatan', destinations: 'Destinasi', contact: 'Hubungi', book: 'Tempah Sekarang' },
 };
 
 export default function Header({ lang, setLang }: HeaderProps) {
@@ -46,6 +46,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
 
   const navLinks = [
     { href: isHomePage ? '#hero' : '/#hero', label: labels.home },
+    { href: '/about', label: labels.about },
     { href: isHomePage ? '#fleet' : '/#fleet', label: labels.fleet },
     { href: isHomePage ? '#services' : '/#services', label: labels.services },
     { href: isHomePage ? '#destinations' : '/#destinations', label: labels.destinations },
