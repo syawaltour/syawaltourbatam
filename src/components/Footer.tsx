@@ -25,7 +25,7 @@ const footerContent: Record<Lang, {
     address: 'Simpang Kara, Ruko Kara Junction, Jl. Ahmad Yani Blok A No 2-3, Taman Baloi, Batam Kota, Kepulauan Riau 29432',
     hours: 'Jam Operasional',
     hoursVal: '24 Jam / 7 Hari',
-    currencies: 'Terima: IDR • MYR • SGD',
+    currencies: 'Terima: SGD • MYR',
     privacy: 'Privasi',
     terms: 'Ketentuan',
   },
@@ -34,7 +34,7 @@ const footerContent: Record<Lang, {
     address: 'Simpang Kara, Ruko Kara Junction, Jl. Ahmad Yani Blok A No 2-3, Taman Baloi, Batam Kota, Riau Islands 29432',
     hours: 'Operating Hours',
     hoursVal: '24 Hours / 7 Days',
-    currencies: 'Accepted: IDR • MYR • SGD',
+    currencies: 'Accepted: SGD • MYR',
     privacy: 'Privacy',
     terms: 'Terms',
   },
@@ -43,7 +43,7 @@ const footerContent: Record<Lang, {
     address: 'Simpang Kara, Ruko Kara Junction, Jl. Ahmad Yani Blok A No 2-3, Taman Baloi, 巴淡岛, 廖内群岛 29432',
     hours: '营业时间',
     hoursVal: '24小时 / 7天',
-    currencies: '接受货币: IDR • MYR • SGD',
+    currencies: '接受货币: SGD • MYR',
     privacy: '隐私',
     terms: '条款',
   },
@@ -52,7 +52,7 @@ const footerContent: Record<Lang, {
     address: 'Simpang Kara, Ruko Kara Junction, Jl. Ahmad Yani Blok A No 2-3, Taman Baloi, Batam Kota, Kepulauan Riau 29432',
     hours: 'Jam Operasi',
     hoursVal: '24 Jam / 7 Hari',
-    currencies: 'Diterima: IDR • MYR • SGD',
+    currencies: 'Diterima: SGD • MYR',
     privacy: 'Privasi',
     terms: 'Terma',
   },
@@ -132,9 +132,9 @@ export default function Footer({ lang }: FooterProps) {
 
         {/* Bottom Bar */}
         <div className="border-t border-border/30 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-muted-foreground">
+          <a href="https://antpen.id" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-accent transition-colors">
             © {year} Antpen. All rights reserved.
-          </p>
+          </a>
           <div className="flex items-center gap-6">
             <a href="#" className="text-xs text-muted-foreground hover:text-accent transition-colors">{c.privacy}</a>
             <a href="#" className="text-xs text-muted-foreground hover:text-accent transition-colors">{c.terms}</a>

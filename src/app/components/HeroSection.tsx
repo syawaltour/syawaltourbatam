@@ -21,6 +21,8 @@ const heroContent: Record<Lang, {
   stat1Val: string;stat1Label: string;
   stat2Val: string;stat2Label: string;
   stat3Val: string;stat3Label: string;
+  stat4Val: string;stat4Label: string;
+  stat5Val: string;stat5Label: string;
 }> = {
   id: {
     eyebrow: 'Batam • Kepulauan Riau',
@@ -30,9 +32,11 @@ const heroContent: Record<Lang, {
     cta1: 'Pesan via WhatsApp',
     cta2: 'Lihat Armada',
     badge: 'Tersedia 24 Jam',
-    stat1Val: '10+', stat1Label: 'Armada Tersedia',
-    stat2Val: '24/7', stat2Label: 'Layanan Aktif',
-    stat3Val: 'MYR·SGD', stat3Label: 'Mata Uang Diterima'
+    stat1Val: '4+', stat1Label: 'Tahun Pengalaman',
+    stat2Val: '1000+', stat2Label: 'Pelanggan Puas',
+    stat3Val: '10+', stat3Label: 'Armada Tersedia',
+    stat4Val: '24/7', stat4Label: 'Layanan Aktif',
+    stat5Val: 'MYR·SGD', stat5Label: 'Mata Uang Diterima'
   },
   en: {
     eyebrow: 'Batam • Riau Islands',
@@ -42,9 +46,11 @@ const heroContent: Record<Lang, {
     cta1: 'Book via WhatsApp',
     cta2: 'View Fleet',
     badge: 'Available 24 Hours',
-    stat1Val: '10+', stat1Label: 'Vehicles Available',
-    stat2Val: '24/7', stat2Label: 'Active Service',
-    stat3Val: 'MYR·SGD', stat3Label: 'Currencies Accepted'
+    stat1Val: '4+', stat1Label: 'Years Experience',
+    stat2Val: '1000+', stat2Label: 'Happy Customers',
+    stat3Val: '10+', stat3Label: 'Vehicles Available',
+    stat4Val: '24/7', stat4Label: 'Active Service',
+    stat5Val: 'MYR·SGD', stat5Label: 'Currencies Accepted'
   },
   zh: {
     eyebrow: '巴淡岛 • 廖内群岛',
@@ -54,9 +60,11 @@ const heroContent: Record<Lang, {
     cta1: 'WhatsApp预订',
     cta2: '查看车队',
     badge: '24小时服务',
-    stat1Val: '10+', stat1Label: '可用车辆',
-    stat2Val: '24/7', stat2Label: '全天服务',
-    stat3Val: 'MYR·SGD', stat3Label: '接受货币'
+    stat1Val: '4+', stat1Label: '年经验',
+    stat2Val: '1000+', stat2Label: '满意客户',
+    stat3Val: '10+', stat3Label: '可用车辆',
+    stat4Val: '24/7', stat4Label: '全天服务',
+    stat5Val: 'MYR·SGD', stat5Label: '接受货币'
   },
   ms: {
     eyebrow: 'Batam • Kepulauan Riau',
@@ -66,9 +74,11 @@ const heroContent: Record<Lang, {
     cta1: 'Tempah melalui WhatsApp',
     cta2: 'Lihat Armada',
     badge: 'Tersedia 24 Jam',
-    stat1Val: '10+', stat1Label: 'Armada Tersedia',
-    stat2Val: '24/7', stat2Label: 'Perkhidmatan Aktif',
-    stat3Val: 'MYR·SGD', stat3Label: 'Mata Wang Diterima'
+    stat1Val: '4+', stat1Label: 'Tahun Pengalaman',
+    stat2Val: '1000+', stat2Label: 'Pelanggan Puas',
+    stat3Val: '10+', stat3Label: 'Armada Tersedia',
+    stat4Val: '24/7', stat4Label: 'Perkhidmatan Aktif',
+    stat5Val: 'MYR·SGD', stat5Label: 'Mata Wang Diterima'
   }
 };
 
@@ -197,15 +207,17 @@ export default function HeroSection({ lang }: HeroSectionProps) {
         </div>
 
         {/* Stats */}
-        <div className="reveal visible reveal-delay-4 grid grid-cols-3 gap-4 sm:gap-8 w-full max-w-2xl">
+        <div className="reveal visible reveal-delay-4 grid grid-cols-5 gap-2 sm:gap-4 w-full max-w-3xl">
           {[
           { val: c.stat1Val, label: c.stat1Label },
           { val: c.stat2Val, label: c.stat2Label },
-          { val: c.stat3Val, label: c.stat3Label }].
+          { val: c.stat3Val, label: c.stat3Label },
+          { val: c.stat4Val, label: c.stat4Label },
+          { val: c.stat5Val, label: c.stat5Label }].
           map((stat, i) =>
-          <div key={i} className="glass rounded-2xl p-4 text-center">
-              <div className="text-xl sm:text-2xl font-extrabold text-gradient-gold mb-1 leading-tight">{stat.val}</div>
-              <div className="text-[10px] sm:text-xs text-muted-foreground font-medium uppercase tracking-wider leading-tight">{stat.label}</div>
+          <div key={i} className="glass rounded-2xl p-3 text-center">
+              <div className="text-lg sm:text-xl font-extrabold text-gradient-gold mb-1 leading-tight">{stat.val}</div>
+              <div className="text-[8px] sm:text-[10px] text-muted-foreground font-medium uppercase tracking-wider leading-tight">{stat.label}</div>
             </div>
           )}
         </div>
