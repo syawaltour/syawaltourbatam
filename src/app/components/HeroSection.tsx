@@ -74,17 +74,34 @@ const heroContent: Record<Lang, {
 
 const heroSlides = [
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_17af47b20-1775950564772.png",
-  alt: 'Luxury dark car on highway at night with glowing headlights and city lights in background'
+  src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhth1aMUPdUk4w89NiFPkiQH97l1kTowjonRKTGCFmlu7_pHbJddgPWU7s66TT977wUjyPPWpQzjSSP7wSf7dsdJhDfXZIMFDpO-DFazgh8yTrx2nbKkoRl8aji1fSzJ_sY-xTu/s1600/01+Maha+Vihara+Duta+Maitreya+Monastery+%2528%25E5%25A4%25A9%25E6%2581%25A9%25E5%25BC%25A5%25E5%258B%2592%25E4%25BD%259B%25E9%2599%25A2%2529+%2540+Batam+Island+%255BIndonesia%255D+%2528Large%2529.JPG",
+  alt: 'Maha Vihara Duta Maitreya - Grand Buddhist temple with ornate golden roof architecture surrounded by tropical greenery dim atmospheric'
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_1db20d68a-1768219291696.png",
-  alt: 'Premium white car exterior in dramatic studio lighting, sleek automotive photography'
+  src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2NMR2cg30r-ILgKw7lWpXdgmbOxklrzPr3nYWZEPH1xpNWdLXsSqXwabAhq56LxZguFC986I_WZbzi3dUS8BKRRYZcsSEEy_z-7kCf8wP&s",
+  alt: 'Jembatan Barelang - Long suspension bridge over turquoise tropical sea water golden hour atmospheric dark shadows'
 },
 {
-  src: "https://images.unsplash.com/photo-1581655957165-cc02a8583004",
-  alt: 'Highway at night with long exposure light trails, deep blue and gold tones'
-}];
+  src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1nP0zMNCbik9o3JGPpVlkYicerwkitG-1Sg&s",
+  alt: 'Puncak Beliung - Scenic mountain viewpoint overlooking city skyline and ocean with atmospheric sunset'
+},
+{
+  src: "https://www.melayupedia.com/foto_berita/2021/10/2021-10-25-tua-pek-kong-klenteng-dan-vihara-dalam-1-komplek-di-batam.jpeg",
+  alt: 'Kelenteng Tua Pek Kong - Traditional Chinese temple with red lanterns ornate roof decorations dim atmospheric low-key lighting',
+},
+{
+  src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1j-udFLGd2Mck-GaoSbr4xZxg2MMVWjcDpw&s",
+  alt: 'Welcome to Batam - Iconic welcome monument landmark with city background',
+},
+{
+  src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDc5j4rlV7d4PtMOkE2TNSP5IxNtqeVB0q4w&s",
+  alt: 'Padang Golf - Green golf course with manicured grass overlooking blue sea and skyline',
+},
+{
+  src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1nP0zMNCbik9o3JGPpVlkYicerwkitG-1Sg&s=10",
+  alt: 'Treasure Bay Batam - Tropical water park with slides and pools surrounded by palm trees bright sunny day',
+}
+];
 
 
 export default function HeroSection({ lang }: HeroSectionProps) {

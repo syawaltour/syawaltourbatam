@@ -8,6 +8,7 @@ import HeroSection from './components/HeroSection';
 import FleetSection from './components/FleetSection';
 import ServicesSection from './components/ServicesSection';
 import DestinationsSection from './components/DestinationsSection';
+import GallerySection from './components/GallerySection';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
 import FaqSection from './components/FaqSection';
@@ -56,6 +57,7 @@ export default function HomePage() {
         <FleetSection lang={lang} />
         <ServicesSection lang={lang} />
         <DestinationsSection lang={lang} />
+        <GallerySection lang={lang} />
         <TestimonialsSection lang={lang} />
         <FaqSection lang={lang} />
         <ContactSection lang={lang} />

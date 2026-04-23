@@ -138,7 +138,7 @@ const destinations: Destination[] = [
   descEn: 'Historic Chinese temple with beautiful architecture. Red lanterns adorn the entire complex, making it an amazing photo spot.',
   descZh: '历史悠久的中式庙宇，建筑精美，红灯笼点缀整个建筑群，是绝佳的拍照胜地。',
   descMs: 'Kuil Cina bersejarah dengan seni bina yang indah. Lampion merah menghiasi seluruh kompleks, menjadikannya tempat foto yang menakjubkan.',
-  image: "https://images.unsplash.com/photo-1581507958967-e2986dfce881",
+  image: "https://www.melayupedia.com/foto_berita/2021/10/2021-10-25-tua-pek-kong-klenteng-dan-vihara-dalam-1-komplek-di-batam.jpeg",
   imageAlt: 'Traditional Chinese temple with red lanterns ornate roof decorations dim atmospheric low-key lighting',
   tag: 'Kelenteng',
   tagType: 'free',
