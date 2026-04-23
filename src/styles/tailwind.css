@@ -160,19 +160,24 @@ html.light {
 }
 
 @keyframes heroFade {
-  0%, 22% { opacity: 1; }
-  25%, 97% { opacity: 0; }
+  0%, 10% { opacity: 1; }
+  12%, 98% { opacity: 0; }
   100% { opacity: 1; }
 }
 
 .hero-slide {
   opacity: 0;
-  animation: heroFade 24s ease-in-out infinite;
+  animation: heroFade 64s ease-in-out infinite;
   will-change: opacity;
 }
 .hero-slide:nth-child(1) { animation-delay: 0s; }
 .hero-slide:nth-child(2) { animation-delay: 8s; }
 .hero-slide:nth-child(3) { animation-delay: 16s; }
+.hero-slide:nth-child(4) { animation-delay: 24s; }
+.hero-slide:nth-child(5) { animation-delay: 32s; }
+.hero-slide:nth-child(6) { animation-delay: 40s; }
+.hero-slide:nth-child(7) { animation-delay: 48s; }
+.hero-slide:nth-child(8) { animation-delay: 56s; }
 
 @keyframes shimmer {
   0% { background-position: -200% center; }

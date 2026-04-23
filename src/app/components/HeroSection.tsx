@@ -110,6 +110,10 @@ const heroSlides = [
 {
   src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1nP0zMNCbik9o3JGPpVlkYicerwkitG-1Sg&s=10",
   alt: 'Treasure Bay Batam - Tropical water park with slides and pools surrounded by palm trees bright sunny day',
+},
+{
+  image: "https://masjidsultan.org/wp-content/uploads/2020/02/Mesjid-Sultan-768x512-1.jpg",
+  imageAlt: 'Masjid Sultan Mahmud Riayat Syah - Grand mosque with Islamic architecture domes and minarets under blue sky',
 }
 ];
 
