@@ -4,6 +4,7 @@ import React from 'react';
 import AppLogo from '@/components/ui/AppLogo';
 import Icon from '@/components/ui/AppIcon';
 import { usePathname } from 'next/navigation';
+import FooterMap from './FooterMap';
 
 type Lang = 'id' | 'en' | 'zh' | 'ms';
 
@@ -93,40 +94,56 @@ export default function Footer({ lang }: FooterProps) {
             </div>
           </div>
 
-          {/* Right: Links + Social */}
-          <div className="flex flex-col gap-6">
-            <nav className="flex flex-wrap gap-x-8 gap-y-3">
-              {[
-                { href: isHomePage ? '#hero' : '/#hero', label: lang === 'id' ? 'Beranda' : lang === 'en' ? 'Home' : lang === 'zh' ? '首页' : 'Utama' },
-                { href: '/about', label: lang === 'id' ? 'Tentang' : lang === 'en' ? 'About' : lang === 'zh' ? '关于' : 'Tentang' },
-                { href: isHomePage ? '#fleet' : '/#fleet', label: lang === 'id' ? 'Armada' : lang === 'en' ? 'Fleet' : lang === 'zh' ? '车队' : 'Armada' },
-                { href: isHomePage ? '#services' : '/#services', label: lang === 'id' ? 'Layanan' : lang === 'en' ? 'Services' : lang === 'zh' ? '服务' : 'Perkhidmatan' },
-                { href: isHomePage ? '#destinations' : '/#destinations', label: lang === 'id' ? 'Destinasi' : lang === 'en' ? 'Destinations' : lang === 'zh' ? '景点' : 'Destinasi' },
-                { href: isHomePage ? '#contact' : '/#contact', label: lang === 'id' ? 'Kontak' : lang === 'en' ? 'Contact' : lang === 'zh' ? '联系' : 'Hubungi' },
-              ].map((l) => (
-                <a key={l.href} href={l.href} className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors duration-200">
-                  {l.label}
-                </a>
-              ))}
-            </nav>
-            <div className="flex items-center gap-3">
-              <a
-                href="https://wa.me/6281269065423"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg glass-light flex items-center justify-center text-foreground hover:text-accent hover:border-accent/40 transition-all duration-200"
-                aria-label="WhatsApp"
-              >
-                <Icon name="ChatBubbleLeftRightIcon" size={18} />
+          {/* Map Section */}
+          <div className="flex flex-col gap-4">
+            <h4 className="text-sm font-semibold text-foreground">
+              {lang === 'id' ? 'Lokasi Kami' : lang === 'en' ? 'Our Location' : lang === 'zh' ? '我们的位置' : 'Lokasi Kami'}
+            </h4>
+            <FooterMap />
+            <a
+              href={`https://www.google.com/maps/dir/?api=1&destination=1.1116458,104.0415502`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-accent hover:underline"
+            >
+              {lang === 'id' ? '🧭 Petunjuk Arah' : lang === 'en' ? '🧭 Get Directions' : lang === 'zh' ? '🧭 获取路线' : '🧭 Arahan'}
+            </a>
+          </div>
+        </div>
+
+        {/* Second Row: Links + Social */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-12">
+          <nav className="flex flex-wrap gap-x-8 gap-y-3">
+            {[
+              { href: isHomePage ? '#hero' : '/#hero', label: lang === 'id' ? 'Beranda' : lang === 'en' ? 'Home' : lang === 'zh' ? '首页' : 'Utama' },
+              { href: '/about', label: lang === 'id' ? 'Tentang' : lang === 'en' ? 'About' : lang === 'zh' ? '关于' : 'Tentang' },
+              { href: isHomePage ? '#fleet' : '/#fleet', label: lang === 'id' ? 'Armada' : lang === 'en' ? 'Fleet' : lang === 'zh' ? '车队' : 'Armada' },
+              { href: isHomePage ? '#services' : '/#services', label: lang === 'id' ? 'Layanan' : lang === 'en' ? 'Services' : lang === 'zh' ? '服务' : 'Perkhidmatan' },
+              { href: isHomePage ? '#destinations' : '/#destinations', label: lang === 'id' ? 'Destinasi' : lang === 'en' ? 'Destinations' : lang === 'zh' ? '景点' : 'Destinasi' },
+              { href: isHomePage ? '#contact' : '/#contact', label: lang === 'id' ? 'Kontak' : lang === 'en' ? 'Contact' : lang === 'zh' ? '联系' : 'Hubungi' },
+            ].map((l) => (
+              <a key={l.href} href={l.href} className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors duration-200">
+                {l.label}
               </a>
-              <a
-                href="tel:+6281269065423"
-                className="w-10 h-10 rounded-lg glass-light flex items-center justify-center text-foreground hover:text-accent hover:border-accent/40 transition-all duration-200"
-                aria-label="Phone"
-              >
-                <Icon name="PhoneIcon" size={18} />
-              </a>
-            </div>
+            ))}
+          </nav>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://wa.me/6281269065423"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-lg glass-light flex items-center justify-center text-foreground hover:text-accent hover:border-accent/40 transition-all duration-200"
+              aria-label="WhatsApp"
+            >
+              <Icon name="ChatBubbleLeftRightIcon" size={18} />
+            </a>
+            <a
+              href="tel:+6281269065423"
+              className="w-10 h-10 rounded-lg glass-light flex items-center justify-center text-foreground hover:text-accent hover:border-accent/40 transition-all duration-200"
+              aria-label="Phone"
+            >
+              <Icon name="PhoneIcon" size={18} />
+            </a>
           </div>
         </div>
 
