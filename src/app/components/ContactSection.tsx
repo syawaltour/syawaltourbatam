@@ -207,6 +207,8 @@ export default function ContactSection({ lang }: ContactSectionProps) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <input
                   type="text"
+                  id="name"
+                  name="name"
                   placeholder={c.namePlaceholder}
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -215,6 +217,8 @@ export default function ContactSection({ lang }: ContactSectionProps) {
                 />
                 <input
                   type="email"
+                  id="email"
+                  name="email"
                   placeholder={c.emailPlaceholder}
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -223,6 +227,8 @@ export default function ContactSection({ lang }: ContactSectionProps) {
               </div>
               <input
                 type="tel"
+                id="phone"
+                name="phone"
                 placeholder={c.phonePlaceholder}
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
@@ -230,6 +236,8 @@ export default function ContactSection({ lang }: ContactSectionProps) {
                 className={inputClass}
               />
               <textarea
+                id="message"
+                name="message"
                 rows={5}
                 placeholder={c.messagePlaceholder}
                 value={form.message}

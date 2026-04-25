@@ -168,6 +168,8 @@ export default function SocialShareSection({ lang }: SocialShareSectionProps) {
           <div className="flex items-center gap-3 bg-[#0D1B3E] rounded-2xl p-4">
             <input
               type="text"
+              id="share-url"
+              name="share-url"
               value={currentUrl}
               readOnly
               className="flex-1 bg-transparent text-[#8FA3CC] outline-none"
