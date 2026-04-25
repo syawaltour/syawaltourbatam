@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SeoJsonLd from '@/components/SeoJsonLd';
@@ -127,6 +127,31 @@ const pageContent: Record<Lang, {
 export default function AboutPage() {
   const [lang, setLang] = useState<Lang>('id');
   const content = pageContent[lang];
+
+  // Reveal animation on scroll
+  useEffect(() => {
+    // Use requestAnimationFrame to ensure DOM is fully rendered
+    const rafId = requestAnimationFrame(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
+      );
+
+      const elements = document.querySelectorAll('.reveal');
+      elements.forEach((el) => observer.observe(el));
+
+      // Cleanup function
+      return () => observer.disconnect();
+    });
+
+    return () => cancelAnimationFrame(rafId);
+  }, []);
 
   return (
     <>
